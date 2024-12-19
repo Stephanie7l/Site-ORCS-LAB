@@ -1,0 +1,41 @@
+- name: André L. Maravilha
+  title: D.Sc. in Electrical Engineering
+  institute: Centro Federal de Educação Tecnológica de Minas Gerais
+  country: Brazil
+  photo: andre-maravilha.jpg
+
+- name: Felipe Campelo
+  title: PhD. in Systems Science and Informatics
+  institute: Aston University
+  country: UK
+  photo: felipe-campelo.jpg
+
+- name: Ricardo H. C. Takahashi
+  title: D.Sc. in Electrical Engineering
+  institute: Universidade Federal de Minas Gerais
+  country: Brazil
+  photo: ricardo-takahashi.jpg
+
+- name: Elizabeth Wanner
+  title: D.Sc. in Electrical Engineering
+  institute: Centro Federal de Educação Tecnológica de Minas Gerais
+  country: Brazil
+  photo: elizabeth-wanner.jpg
+
+- name: Adriano Cesar Machado Pereira
+  title: D.Sc. in Computer Science
+  institute: Universidade Federal de Minas Gerais
+  country: Brazil
+  photo: adriano-pereira.gif
+
+- name: Claus de Castro Aranha
+  title: Ph.D. in Frontier Informatics
+  institute: Tsukuba University
+  country: Japan
+  photo: claus-aranha.gif
+
+- name: Martín Gómez Ravetti
+  title: D.Sc. in Computer Science
+  institute: Universidade Federal de Minas Gerais
+  country: Brazil
+  photo: martin-ravetti.gif
