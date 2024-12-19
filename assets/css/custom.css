@@ -2,38 +2,73 @@
  * Google fonts
  * ************************************************************************** */
 
- @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic');
- @import url('https://fonts.googleapis.com/css?family=Raleway:400,300,700');
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,300,700");
 
-
- /* **************************************************************************
+/* **************************************************************************
  * General
  * ************************************************************************** */
 
 body {
-    font-family: "Raleway";
-    color: #555;
+  font-family: "Raleway";
+  color: #555;
 
-    -webkit-font-smoothing: antialiased;
-    -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
 }
 
-
- /* **************************************************************************
+/* **************************************************************************
  * Team
  * ************************************************************************** */
 
 .team-member p {
-    font-size: small;
+  font-size: small;
 }
 
 .team-member img {
-    object-fit: cover;
-    object-position: center;
-    width: 158px;
-    max-width: 158px;
-    height: 158px;
-    max-height: 158px;
+  object-fit: cover;
+  object-position: center;
+  width: 158px;
+  max-width: 158px;
+  height: 158px;
+  max-height: 158px;
 }
 
-img[alt=orcslab] { width: 500px; float: right;}
+img[alt="orcslab"] {
+  width: 500px;
+  float: right;
+}
+
+/* **************************************************************************
+ * Header
+ * ************************************************************************** */
+.site-header {
+  background-color: #60a4bf; /* Altere esta cor conforme necessário */
+  color: white; /* Cor do texto */
+  padding: 20px;
+  text-align: center;
+}
+
+.site-header img {
+  width: 100px;
+  height: auto;
+}
+
+.site-header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.site-header nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.site-header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.site-header nav ul li a:hover {
+  text-decoration: underline;
+}
