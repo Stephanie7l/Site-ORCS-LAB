@@ -73,3 +73,10 @@ img[alt="orcslab"] {
 .site-header nav ul li a:hover {
   text-decoration: underline;
 }
+
+.site-header .site-logo {
+  display: block;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  width: 100px; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+}
