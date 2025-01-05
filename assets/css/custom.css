@@ -52,6 +52,7 @@ img[alt="orcslab"] {
 .site-header img {
   width: 100px;
   height: auto;
+  margin-right: 20px;
 }
 
 .site-header nav ul {
