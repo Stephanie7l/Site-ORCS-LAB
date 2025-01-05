@@ -49,19 +49,25 @@ img[alt="orcslab"] {
   text-align: center;
 }
 
-.site-header img {
-  width: 100px;
+.logo-menu-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Adapta espaçamento entre logo e menu */
+}
+
+.site-logo {
+  width: 100px; /* Ajuste conforme necessário */
   height: auto;
-  margin-right: 20px;
 }
 
 .site-header nav ul {
+  display: flex;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .site-header nav ul li {
-  display: inline;
   margin: 0 10px;
 }
 
@@ -72,11 +78,4 @@ img[alt="orcslab"] {
 
 .site-header nav ul li a:hover {
   text-decoration: underline;
-}
-
-.site-header .site-logo {
-  display: block;
-  margin: 0 auto; /* Centraliza horizontalmente */
-  width: 100px; /* Ajuste o tamanho conforme necessário */
-  height: auto;
 }
