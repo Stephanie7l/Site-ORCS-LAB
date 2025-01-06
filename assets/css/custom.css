@@ -84,10 +84,11 @@ img[alt="orcslab"] {
  * Footer
  * ************************************************************************** */
 .site-footer {
-  background-color: #60a4bf; /* Altere esta cor conforme necessário */
-  color: white;
+  background-color: #60a4bf; /* Cor de fundo do footer */
+  color: white; /* Cor do texto */
   padding: 20px 0;
   text-align: center;
+  font-family: "Raleway", sans-serif; /* Consistência com o restante do site */
 }
 
 .site-footer .container {
@@ -95,9 +96,11 @@ img[alt="orcslab"] {
   margin: 0 auto;
 }
 
+/* Seções do footer */
 .site-footer h6 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
+  font-weight: bold;
 }
 
 .site-footer p {
@@ -105,19 +108,20 @@ img[alt="orcslab"] {
   margin-bottom: 1rem;
 }
 
-.site-footer iframe {
-  border: none;
+/* Links no footer */
+.site-footer a {
+  color: white;
+  text-decoration: none;
 }
 
-.site-footer .border-top {
-  border-top: 1px solid #ccc;
-  padding-top: 20px;
-  margin-top: 20px;
+.site-footer a:hover {
+  color: #ddd;
 }
 
+/* Redes sociais */
 .site-footer .list-unstyled {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; /* Ajusta alinhamento para a direita */
   margin: 0;
   padding: 0;
   list-style: none;
@@ -129,9 +133,35 @@ img[alt="orcslab"] {
 
 .site-footer .list-unstyled li a {
   color: white;
-  text-decoration: none;
+  font-size: 1.5rem;
 }
 
 .site-footer .list-unstyled li a:hover {
-  color: #ddd;
+  color: #ddd; /* Cor ao passar o mouse */
+}
+
+/* Mapa no footer */
+.site-footer iframe {
+  border: none;
+  border-radius: 8px; /* Opcional: arredondar bordas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+/* Borda superior da última seção */
+.site-footer .border-top {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .site-footer .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .site-footer .list-unstyled {
+    justify-content: center;
+  }
 }
