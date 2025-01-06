@@ -94,3 +94,44 @@ img[alt="orcslab"] {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.site-footer h6 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.site-footer p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.site-footer iframe {
+  border: none;
+}
+
+.site-footer .border-top {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.site-footer .list-unstyled {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer .list-unstyled li {
+  margin-left: 15px;
+}
+
+.site-footer .list-unstyled li a {
+  color: white;
+  text-decoration: none;
+}
+
+.site-footer .list-unstyled li a:hover {
+  color: #ddd;
+}
