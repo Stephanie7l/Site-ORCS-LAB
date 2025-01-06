@@ -84,7 +84,7 @@ img[alt="orcslab"] {
  * Footer
  * ************************************************************************** */
 .site-footer {
-  background-color: #60a4bf; /* Cor de fundo do footer */
+  background-color: #60a4bf !important; /* Cor de fundo do footer */
   color: white; /* Cor do texto */
   padding: 20px 0;
   text-align: center;
