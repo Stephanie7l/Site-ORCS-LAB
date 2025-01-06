@@ -79,3 +79,18 @@ img[alt="orcslab"] {
 .site-header nav ul li a:hover {
   text-decoration: underline;
 }
+
+/* **************************************************************************
+ * Footer
+ * ************************************************************************** */
+.site-footer {
+  background-color: #60a4bf; /* Altere esta cor conforme necessário */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.site-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
