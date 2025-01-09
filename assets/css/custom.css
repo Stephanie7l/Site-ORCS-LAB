@@ -99,18 +99,12 @@ img[alt="orcslab"] {
 /* Seções do footer */
 .site-footer h6,
 .site-footer p,
-.site-footer a {
-  color: white !important; /* Cor do texto */
-}
-
-.site-footer a:hover {
-  color: #ddd !important; /* Cor do texto ao passar o mouse */
-}
-
+.site-footer a,
 .site-footer .list-unstyled li a {
   color: white !important; /* Cor do texto */
 }
 
+.site-footer a:hover,
 .site-footer .list-unstyled li a:hover {
   color: #ddd !important; /* Cor do texto ao passar o mouse */
 }
