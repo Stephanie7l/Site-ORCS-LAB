@@ -78,6 +78,9 @@ img[alt="orcslab"] {
 .site-header nav ul li a {
   color: white;
   text-decoration: none;
+  display: inline-block;
+  padding: 0 10px; /* Adicione padding para evitar deslocamento */
+  transition: font-weight 0.2s; /* Adicione transição suave */
 }
 
 .site-header nav ul li a:hover {
@@ -116,7 +119,7 @@ img[alt="orcslab"] {
   color: #60a4bf;
   padding: 10px 20px;
   display: block;
-  text-decoration: none;
+  border-bottom: 1px solid #ddd; /* Adiciona o traço horizontal */
 }
 
 .site-header nav ul li .submenu li a:hover {
