@@ -87,8 +87,9 @@ img[alt="orcslab"] {
 
 /* Adiciona a setinha ao lado do item "Acontece" */
 .site-header nav ul li a[href="/Site-ORCS-LAB/acontece/"]::after {
-  content: "v";
+  content: " v";
   font-size: 0.8em;
+  font-weight: bold;
 }
 
 /* Estilo para o submenu */
