@@ -156,3 +156,11 @@ img[alt="orcslab"] {
 .site-footer .list-unstyled li a:hover {
   color: #ddd !important; /* Cor do texto ao passar o mouse */
 }
+
+/* **************************************************************************
+ * Contato
+ * ************************************************************************** */
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
