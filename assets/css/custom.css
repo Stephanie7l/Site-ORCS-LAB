@@ -90,7 +90,7 @@ img[alt="orcslab"] {
   content: " v";
   font-size: 0.8em;
   font-weight: bold;
-  display: inline-block;
+  /*display: inline-block;*/
   vertical-align: middle;
 }
 
