@@ -17,6 +17,15 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+/* Remove a sublinha dos links */
+a.text-muted {
+  text-decoration: none;
+}
+
+a.text-muted:hover {
+  text-decoration: underline;
+}
+
 /* **************************************************************************
  * Team
  * ************************************************************************** */
