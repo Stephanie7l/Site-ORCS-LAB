@@ -17,13 +17,17 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-/* Remove a sublinha dos links */
 a.text-muted {
   text-decoration: none;
 }
 
 a.text-muted:hover {
   text-decoration: underline;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
 }
 
 /* **************************************************************************
@@ -87,16 +91,14 @@ img[alt="orcslab"] {
 .site-header nav ul li a {
   color: white;
   text-decoration: none;
-  /*display: inline-block;*/
 }
 
 .site-header nav ul li a:hover {
   font-weight: bold;
 }
 
-/* Adiciona a setinha ao lado do item "Acontece" */
 .site-header nav ul li a[href="/Site-ORCS-LAB/acontece/"]::after {
-  content: " v";
+  content: "   v";
   font-size: 0.8em;
   font-weight: bold;
 }
@@ -112,8 +114,8 @@ img[alt="orcslab"] {
   list-style: none;
   margin: 0;
   text-align: center;
-  width: 130px; /* Ajuste conforme necessário */
-  z-index: 1000; /* Garante que o submenu sobreponha outros itens da página */
+  width: 130px;
+  z-index: 1000;
 }
 
 .site-header nav ul li:hover .submenu {
@@ -139,11 +141,11 @@ img[alt="orcslab"] {
  * Footer
  * ************************************************************************** */
 .site-footer {
-  background-color: #60a4bf !important; /* Cor de fundo do footer */
-  color: white !important; /* Cor do texto */
+  background-color: #60a4bf !important;
+  color: white !important;
   padding: 20px 0;
   text-align: center;
-  font-family: "Raleway", sans-serif; /* Consistência com o restante do site */
+  font-family: "Raleway", sans-serif;
 }
 
 .site-footer .container {
@@ -151,23 +153,14 @@ img[alt="orcslab"] {
   margin: 0 auto;
 }
 
-/* Seções do footer */
 .site-footer h6,
 .site-footer p,
 .site-footer a,
 .site-footer .list-unstyled li a {
-  color: white !important; /* Cor do texto */
+  color: white !important;
 }
 
 .site-footer a:hover,
 .site-footer .list-unstyled li a:hover {
-  color: #ddd !important; /* Cor do texto ao passar o mouse */
-}
-
-/* **************************************************************************
- * Contato
- * ************************************************************************** */
-h1 {
-  text-align: center;
-  font-weight: bold;
+  color: #ddd !important;
 }
