@@ -57,7 +57,7 @@ img[alt="orcslab"] {
  * ************************************************************************** */
 /* Estilo para o header */
 .site-header {
-  background-color: #60a4bf; /* Altere esta cor conforme necessário */
+  background-color: #00008b; /*#60a4bf;*/ /* Altere esta cor conforme necessário */
   color: white; /* Cor do texto */
   padding: 20px 0;
   text-align: center;
@@ -127,7 +127,7 @@ img[alt="orcslab"] {
 }
 
 .site-header nav ul li .submenu li a {
-  color: #60a4bf;
+  color: #00008b; /* #60a4bf;*/
   padding: 0px 20px;
   display: block;
 }
@@ -141,7 +141,7 @@ img[alt="orcslab"] {
  * Footer
  * ************************************************************************** */
 .site-footer {
-  background-color: #60a4bf !important;
+  background-color: /*#60a4bf*/ #00008b !important;
   color: white !important;
   padding: 20px 0;
   text-align: center;
