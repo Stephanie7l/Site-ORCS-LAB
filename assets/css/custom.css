@@ -98,7 +98,7 @@ img[alt="orcslab"] {
 }
 
 .site-header nav ul li a[href="/Site-ORCS-LAB/acontece/"]::after {
-  content: "▼";
+  content: " ▼";
   font-size: 0.8em;
   font-weight: bold;
 }
