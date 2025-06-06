@@ -63,12 +63,21 @@ h5 {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Logo alinhada à esquerda e menu à direita */
 .logo-menu-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+
+.logo-menu-wrapper nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
 }
 
 .site-logo {
@@ -76,15 +85,6 @@ h5 {
   width: auto;
   display: block;
   margin-right: 1rem;
-}
-
-/* Menu horizontal com espaçamento */
-.logo-menu-wrapper nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 1rem;
 }
 
 .logo-menu-wrapper nav ul li {
