@@ -1,166 +1,73 @@
-/* **************************************************************************
- * Google fonts
- * ************************************************************************** */
-
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic");
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,300,700");
-
-/* **************************************************************************
- * General
- * ************************************************************************** */
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
 body {
-  font-family: "Raleway";
-  color: #555;
-
-  -webkit-font-smoothing: antialiased;
-  -webkit-overflow-scrolling: touch;
-}
-
-a.text-muted {
-  text-decoration: none;
-}
-
-a.text-muted:hover {
-  text-decoration: underline;
-}
-
-h1 {
-  text-align: center;
-  font-weight: bold;
-}
-
-/* **************************************************************************
- * Team
- * ************************************************************************** */
-
-.team-member p {
-  font-size: small;
-}
-
-.team-member img {
-  object-fit: cover;
-  object-position: center;
-  width: 158px;
-  max-width: 158px;
-  height: 158px;
-  max-height: 158px;
-}
-
-img[alt="orcslab"] {
-  width: 500px;
-  float: right;
-}
-
-/* **************************************************************************
- * Header
- * ************************************************************************** */
-/* Estilo para o header */
-.site-header {
-  background-color: #191970; /*#60a4bf;*/ /* Altere esta cor conforme necessário */
-  color: white; /* Cor do texto */
-  padding: 20px 0;
-  text-align: center;
-  font-family: "Raleway", sans-serif; /* Consistência com o restante do site */
-}
-
-.logo-menu-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.site-header .logo {
-  width: 100px;
-  height: auto;
-  margin-right: 20px;
-}
-
-.site-header nav ul {
-  list-style: none;
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+  color: #003366;
+  margin: 0;
   padding: 0;
-  margin: 0;
-  display: flex;
 }
 
-.site-header nav ul li {
-  position: relative;
-  margin: 0 10px;
-}
-
-.site-header nav ul li a {
-  color: white;
+a {
+  color: #005f99;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.site-header nav ul li a:hover {
-  font-weight: bold;
+a:hover {
+  color: #66b2ff;
 }
 
-.site-header nav ul li a[href="/Site-ORCS-LAB/acontece/"]::after {
-  content: " ▼";
-  font-size: 0.8em;
-  font-weight: bold;
+header,
+.navbar {
+  background-color: #003366;
+  color: #ffffff;
+  padding: 1rem;
 }
 
-/* Estilo para o submenu */
-.site-header nav ul li .submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #ffffff;
-  padding: 10px 0;
-  list-style: none;
-  margin: 0;
+footer {
+  background-color: #003366;
+  color: #ffffff;
   text-align: center;
-  width: 130px;
-  z-index: 1000;
+  padding: 1rem 0;
+  margin-top: 2rem;
 }
 
-.site-header nav ul li:hover .submenu {
-  display: block;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #003366;
+  margin-bottom: 0.5rem;
 }
 
-.site-header nav ul li .submenu li {
-  margin: 0;
+.btn-primary {
+  background-color: #005f99;
+  border-color: #005f99;
+  color: #ffffff;
 }
 
-.site-header nav ul li .submenu li a {
-  color: #191970; /* #60a4bf;*/
-  padding: 0px 20px;
-  display: block;
+.btn-primary:hover {
+  background-color: #66b2ff;
+  border-color: #66b2ff;
+  color: #003366;
 }
 
-.site-header nav ul li .submenu li a:hover {
+.section {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
   background-color: #ffffff;
-  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* **************************************************************************
- * Footer
- * ************************************************************************** */
-.site-footer {
-  background-color: /*#60a4bf*/ #191970 !important;
-  color: white !important;
-  padding: 20px 0;
-  text-align: center;
-  font-family: "Raleway", sans-serif;
+.navbar-brand,
+.nav-link {
+  color: #ffffff !important;
 }
 
-.site-footer .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.site-footer h6,
-.site-footer p,
-.site-footer a,
-.site-footer .list-unstyled li a {
-  color: white !important;
-}
-
-.site-footer a:hover,
-.site-footer .list-unstyled li a:hover {
-  color: #ddd !important;
+.nav-link:hover {
+  color: #66b2ff !important;
 }
