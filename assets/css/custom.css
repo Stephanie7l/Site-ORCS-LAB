@@ -63,6 +63,52 @@ h5 {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
+/* Logo alinhada à esquerda e menu à direita */
+.logo-menu-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.site-logo {
+  height: 40px;
+  width: auto;
+  display: block;
+  margin-right: 1rem;
+}
+
+/* Menu horizontal com espaçamento */
+.logo-menu-wrapper nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.logo-menu-wrapper nav ul li {
+  position: relative;
+}
+
+/* Submenu (dropdown) */
+.logo-menu-wrapper nav ul li ul.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #003366;
+  padding: 0.5rem;
+  display: none;
+  list-style: none;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.logo-menu-wrapper nav ul li:hover ul.submenu {
+  display: flex;
+}
+
+/* Estilo dos links do menu */
 .nav-link {
   font-weight: 600;
   opacity: 0.8;
@@ -76,14 +122,4 @@ h5 {
 .nav-link:hover {
   opacity: 1;
   color: #66b2ff !important;
-}
-
-.navbar-brand img {
-  height: 40px;
-}
-
-.logo-menu-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
