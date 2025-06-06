@@ -66,8 +66,11 @@ h5 {
 .nav-link {
   font-weight: 600;
   opacity: 0.8;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, color 0.3s ease;
   color: #ffffff !important;
+  display: inline-block;
+  min-width: 80px;
+  text-align: center;
 }
 
 .nav-link:hover {
@@ -77,4 +80,10 @@ h5 {
 
 .navbar-brand img {
   height: 40px;
+}
+
+.logo-menu-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
