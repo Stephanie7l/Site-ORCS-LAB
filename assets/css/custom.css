@@ -71,6 +71,10 @@ h5 {
   gap: 2rem;
 }
 
+.logo-menu-wrapper:hover {
+  transform: scale(1.2); /* leve zoom para destacar */
+}
+
 .logo-menu-wrapper nav ul {
   list-style: none;
   margin: 0;
@@ -121,5 +125,5 @@ h5 {
 
 .nav-link:hover {
   color: #66b2ff !important; /* tom azul claro */
-  transform: scale(1.05); /* leve zoom para destacar */
+  transform: scale(1.2); /* leve zoom para destacar */
 }
