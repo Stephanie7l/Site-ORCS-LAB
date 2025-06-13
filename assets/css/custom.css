@@ -123,3 +123,24 @@ h5 {
   color: #66b2ff !important; /* tom azul claro */
   transform: scale(1.2); /* leve zoom para destacar */
 }
+
+.card.team-member {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.card.team-member .card-body {
+  flex-grow: 1;
+}
+
+.row .col-12.col-lg-6 {
+  display: flex;
+}
+
+.card.team-member img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
