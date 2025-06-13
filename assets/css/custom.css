@@ -147,33 +147,32 @@ h5 {
 
 /* === Padronização de cards da equipe e alumni === */
 
-/* Cards com altura igual */
+/* Garantir que os cards preencham igualmente as colunas */
 .card.team-member,
 .card.team-alumni {
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
+  height: 100%;
 }
 
-/* Corpo do card ocupa o restante do espaço */
 .card.team-member .card-body,
 .card.team-alumni .card-body {
   flex-grow: 1;
 }
 
-/* Garante que colunas não colapsem e os cards fiquem alinhados */
-.row .col-12.col-lg-6,
-.row .col-12.col-md-6,
-.row .col-sm-6 {
+/* Forçar as colunas a manterem altura uniforme */
+.col-12.col-lg-6,
+.col-12.col-md-6,
+.col-sm-6 {
   display: flex;
 }
 
-/* Padronização das imagens */
+/* Padronização das imagens dos membros e alumni */
 .card.team-member img,
 .card.team-alumni img {
-  width: 100px;
-  height: 100px;
+  width: 100px !important;
+  height: 100px !important;
   object-fit: cover;
   border-radius: 50%;
+  display: block;
 }
