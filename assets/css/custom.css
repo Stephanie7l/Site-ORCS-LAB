@@ -185,7 +185,7 @@ h5 {
 
 /* Deixa os links presentes na página de contatos em azul escuro */
 .link-personalizado {
-  color: #005f99;; /* azul escuro */
+  color: #003366; /* azul escuro */
   text-decoration: none;
   transition: color 0.3s ease;
 }
