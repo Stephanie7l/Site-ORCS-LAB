@@ -47,6 +47,7 @@ h5 {
   background-color: #005f99;
   border-color: #005f99;
   color: #ffffff;
+  font-weight: bold;
 }
 
 .btn-primary:hover {
@@ -178,13 +179,13 @@ h5 {
 }
 
 /* Negrito em todos os botões do site */
-.btn {
+/*.btn {
   font-weight: bold;
-}
+}*/
 
 /* Deixa os links presentes na página de contatos em azul escuro */
 .link-personalizado {
-  color: inherit; /* azul escuro */
+  color: #005f99;; /* azul escuro */
   text-decoration: none;
   transition: color 0.3s ease;
 }
