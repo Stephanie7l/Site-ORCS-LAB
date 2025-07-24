@@ -181,3 +181,17 @@ h5 {
 .btn {
   font-weight: bold;
 }
+
+/* Deixa os links presentes na página de contatos em azul escuro */
+.link-personalizado {
+  color: #000080; /* azul escuro */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Deixa os links presentes na página de contatos em azul claro quando o usuário passa o cursor do mouse por cima */
+.link-personalizado:hover {
+  color: #5dade2; /* azul claro ao passar o mouse */
+  text-decoration: underline;
+}
+
