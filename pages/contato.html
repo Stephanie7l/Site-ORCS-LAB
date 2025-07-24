@@ -13,70 +13,53 @@ title: Contato
     </p>
   </div>
   <div class="row">
-    <div class="col-12 col-lg-6 mb-5 mx-auto">
-      <div class="mb-4">
+  <!-- Coluna: Informações de Contato -->
+  <div class="col-12 col-lg-6 mb-4">
+    <div class="d-flex flex-column gap-3">
+      <div>
         <h6><i class="bi bi-telephone-fill"></i> Telefone</h6>
-        <p class="fs-6">+55 31 3409-3550</p>
+        <p class="fs-6 m-0">+55 31 3409-3550</p>
       </div>
-      <div class="mb-4">
+
+      <div>
+        <h6><i class="bi bi-whatsapp"></i> WhatsApp</h6>
+        <a class="text-muted text-decoration-none" href="https://wa.me/5531999999999" target="_blank">
+          (31) 99999-9999
+        </a>
+      </div>
+
+      <div>
+        <h6><i class="bi bi-linkedin"></i> LinkedIn</h6>
+        <a class="text-muted text-decoration-none" href="{{ site.linkedin_url }}" target="_blank">
+          Nosso LinkedIn
+        </a>
+      </div>
+
+      <div>
         <h6>
-          <i class="bi bi-whatsapp"></i>
-          <a
-            class="text-muted text-decoration-none"
-            href="https://wa.me/553134093550"
-          >
-            WhatsApp</a
-          >
+          <img src="{{ site.baseurl }}/assets/images/researchate-svgrepo-com.svg"
+               alt="ResearchGate" style="width: 20px; height: 20px; vertical-align: middle;" />
+          ResearchGate
         </h6>
+        <a class="text-muted text-decoration-none" href="https://www.researchgate.net/" target="_blank">
+          Acesse nosso perfil
+        </a>
       </div>
-      <div class="mb-4">
-        <h6>
-          <i class="bi bi-linkedin"></i>
-          <a
-            class="text-muted text-decoration-none"
-            href="{{ site.linkedin_url }}"
-          >
-            LinkedIn</a
-          >
-        </h6>
-      </div>
-      <div class="mb-4">
-        <h6>
-          <img
-            src="./assets/images/researchate-svgrepo-com.svg"
-            alt="ResearchGate"
-            style="width: 20px; height: 20px; vertical-align: middle"
-          />
-          <a
-            class="text-muted text-decoration-none"
-            href="https://www.researchgate.net/"
-          >
-            Research Gate
-          </a>
-        </h6>
-      </div>
-      <div class="mb-4">
+
+      <div>
         <h6><i class="bi bi-geo-alt-fill"></i> Endereço</h6>
-        <p class="fs-6">
-          Laboratório de Pesquisa Operacional e Sistemas Complexos (ORCS
-          Lab.)<br />
-          Sala 1214, Departamento de Engenharia Elétrica<br />
-          Escola de Engenharia, UFMG, Av. Pres. Antônio Carlos 6627<br />
-          31275-013 - Belo Horizonte, Brasil
-        </p>
+        <p class="fs-6 m-0">Av. Antônio Carlos, 6627 - Pampulha, Belo Horizonte - MG, 31270-901</p>
       </div>
     </div>
-    <div class="col-12 col-lg-6 mb-5">
+  </div>
+
+  <!-- Coluna: Mapa -->
+  <div class="col-12 col-lg-6">
+    <div style="width: 100%; height: 100%; min-height: 300px;">
       <iframe
-        width="100%"
-        height="300"
-        id="gmap_canvas"
-        src="https://maps.google.com/maps?q=School%20of%20Engineering,%20UFMG,%20Brazil&t=&z=15&ie=UTF8&iwloc=&output=embed"
-        frameborder="0"
-        scrolling="no"
-        marginheight="0"
-        marginwidth="0"
-      ></iframe>
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.0802141403644!2d-43.96743848462457!3d-19.8702711395506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69067d930bb95%3A0x3d4bcb88137f86e4!2sUniversidade%20Federal%20de%20Minas%20Gerais%20-%20UFMG!5e0!3m2!1spt-BR!2sbr!4v1688903063521!5m2!1spt-BR!2sbr"
+        width="100%" height="100%" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </div>
