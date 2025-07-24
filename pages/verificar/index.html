@@ -5,18 +5,30 @@ title: Home
 ---
 
 
-<div class="row">
-    <div class="col-12 col-lg-8 h-100">
-        <img class="img-fluid mb-3" src="{{ '/assets/images/banner.png' | relative_url }}">
-        <h5>Welcome to the ORCS Lab website!</h5>
-        <p> The Operations Research and Complex Systems Lab (ORCS Lab), part of the 
-            Department of Electrical Engineering within the School of Engineering at 
-            the Federal University of Minas Gerais (Brazil) carries out a diverse 
-            range of research involving optimization, computational intelligence, 
-            evolutionary computation, decision-making, statistical modeling, and 
-            stochastic simulation.</p>
+<!-- Banner com imagem do laboratório e botão "Conheça" -->
+<section style="position: relative; text-align: left; color: white;">
+  <img src="/assets/images/banner.png" alt="Laboratório" style="width: 100%;">
+  <div style="position: absolute; top: 30%; left: 5%;">
+    <h1 style="font-size: 2.5rem;">Laboratório de Pesquisa<br>Operacional e Sistemas Complexos</h1>
+    <a href="/quem-somos.html" class="btn btn-primary mt-3">Conheça</a>
+  </div>
+</section>
+
+<!-- Seção de Serviços -->
+<section style="padding: 50px 0; text-align: center;">
+  <h2><strong>Nossos Serviços</strong></h2>
+  <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; margin-top: 30px;">
+    <div style="background-color: #a9cce3; width: 200px; padding: 30px; border-radius: 10px;">
+      <h3>SERVIÇO 1</h3>
+      <a href="/servicos.html#servico1" class="btn btn-primary mt-2">Saiba Mais</a>
     </div>
-    <div class="col-12 col-lg-4">
-        {% include news.html %}
+    <div style="background-color: #a9cce3; width: 200px; padding: 30px; border-radius: 10px;">
+      <h3>SERVIÇO 2</h3>
+      <a href="/servicos.html#servico2" class="btn btn-primary mt-2">Saiba Mais</a>
     </div>
-</div>
+    <div style="background-color: #a9cce3; width: 200px; padding: 30px; border-radius: 10px;">
+      <h3>SERVIÇO 3</h3>
+      <a href="/servicos.html#servico3" class="btn btn-primary mt-2">Saiba Mais</a>
+    </div>
+  </div>
+</section>
