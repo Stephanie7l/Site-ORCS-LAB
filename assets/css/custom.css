@@ -192,7 +192,7 @@ h5 {
 
 /* Deixa os links presentes na página de contatos em azul claro quando o usuário passa o cursor do mouse por cima */
 .link-personalizado:hover {
-  color: #5dade2; /* azul claro ao passar o mouse */
+  color: #66b2ff; /* azul claro ao passar o mouse */
   text-decoration: underline;
 }
 
