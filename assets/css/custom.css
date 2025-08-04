@@ -28,10 +28,21 @@ header,
 
 footer {
   background-color: #003366;
-  color: #ffffff !important;
+  color: #ffffff;
   text-align: center;
   padding: 1rem 0;
   margin-top: 2rem;
+}
+
+footer a {
+  color: #ffffff !important;
+  font-weight: 600;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+footer a:hover {
+  color: #66b2ff !important;
+  transform: scale(1.1);
 }
 
 h1,
