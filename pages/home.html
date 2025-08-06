@@ -4,13 +4,11 @@ permalink: /
 title: Home
 ---
 
-
 <!-- Banner com imagem do laboratório e botão "Conheça" -->
-<section style="position: relative; text-align: left;">
-  <img src="{{ site.baseurl }}/assets/images/laboratorio.jpeg" alt="Laboratório" style="width: 100%;">
-  <div style="position: absolute; top: 30%; left: 5%;">
-    <h1 style="font-size: 2.5rem; color: white; font-weight: bold;
-               text-shadow: -1px -1px 0 #000080, 1px -1px 0 #000080, -1px 1px 0 #000080, 1px 1px 0 #000080;">
+<section class="position-relative text-white" style="width: 100%;">
+  <img src="{{ site.baseurl }}/assets/images/laboratorio.jpeg" alt="Laboratório" class="img-fluid w-100" style="max-height: 600px; object-fit: cover;">
+  <div class="position-absolute top-50 start-0 translate-middle-y ps-4 pe-4">
+    <h1 class="display-5 fw-bold text-shadow text-white">
       Laboratório de Pesquisa<br>Operacional e Sistemas Complexos
     </h1>
     <a href="/Site-ORCS-LAB/quemsomos/" class="btn btn-primary mt-3">Conheça</a>
@@ -18,19 +16,16 @@ title: Home
 </section>
 
 <!-- Seção de Serviços -->
-<section style="padding: 50px 0; text-align: center;">
-  <h2><strong>Nossos Serviços</strong></h2>
-  <br>
+<section class="py-5 text-center bg-light">
   <div class="container">
-    <div class="row justify-content-center gx-2 gy-4">
-      
+    <h2 class="mb-4 fw-bold">Nossos Serviços</h2>
+    <div class="row gx-4 gy-4 justify-content-center">
       <!-- Card 1 -->
-      <div class="col-md-3">
-        <div class="card h-100" style="padding: 10px;">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm">
           <div class="card-body text-center">
-            <h5 class="card-title"><strong>Serviço 1</strong></h5>
-            <img src="{{ site.baseurl }}/assets/images/servico-1.jpg" alt="Serviço 1"
-              class="img-fluid mb-3" style="width: 150px; height: 120px;">
+            <h5 class="card-title fw-bold">Serviço 1</h5>
+            <img src="{{ site.baseurl }}/assets/images/servico-1.jpg" alt="Serviço 1" class="img-fluid mb-3" style="height: 120px; object-fit: cover;">
             <p class="card-text">Descrição breve do serviço 1 oferecido pelo laboratório.</p>
             <a href="/Site-ORCS-LAB/servicos/#servico1" class="btn btn-primary">Saiba mais</a>
           </div>
@@ -38,12 +33,11 @@ title: Home
       </div>
 
       <!-- Card 2 -->
-      <div class="col-md-3">
-        <div class="card h-100" style="padding: 10px;">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm">
           <div class="card-body text-center">
-            <h5 class="card-title"><strong>Serviço 2</strong></h5>
-            <img src="{{ site.baseurl }}/assets/images/servico-2.jpg" alt="Serviço 2"
-              class="img-fluid mb-3" style="width: 150px; height: 120px;">
+            <h5 class="card-title fw-bold">Serviço 2</h5>
+            <img src="{{ site.baseurl }}/assets/images/servico-2.jpg" alt="Serviço 2" class="img-fluid mb-3" style="height: 120px; object-fit: cover;">
             <p class="card-text">Descrição breve do serviço 2 oferecido pelo laboratório.</p>
             <a href="/Site-ORCS-LAB/servicos/#servico2" class="btn btn-primary">Saiba mais</a>
           </div>
@@ -51,12 +45,11 @@ title: Home
       </div>
 
       <!-- Card 3 -->
-      <div class="col-md-3">
-        <div class="card h-100" style="padding: 10px;">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm">
           <div class="card-body text-center">
-            <h5 class="card-title"><strong>Serviço 3</strong></h5>
-            <img src="{{ site.baseurl }}/assets/images/servico-3.jpeg" alt="Serviço 3"
-              class="img-fluid mb-3" style="width: 150px; height: 120px;">
+            <h5 class="card-title fw-bold">Serviço 3</h5>
+            <img src="{{ site.baseurl }}/assets/images/servico-3.jpeg" alt="Serviço 3" class="img-fluid mb-3" style="height: 120px; object-fit: cover;">
             <p class="card-text">Descrição breve do serviço 3 oferecido pelo laboratório.</p>
             <a href="/Site-ORCS-LAB/servicos/#servico3" class="btn btn-primary">Saiba mais</a>
           </div>
