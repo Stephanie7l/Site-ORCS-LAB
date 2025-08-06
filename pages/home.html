@@ -4,61 +4,102 @@ permalink: /
 title: Home
 ---
 
-<!-- Banner com imagem do laboratório e botão "Conheça" -->
-<section class="position-relative text-white">
-  <div class="ratio ratio-16x9">
-    <img src="{{ site.baseurl }}/assets/images/laboratorio.jpeg" alt="Laboratório" class="img-fluid object-fit-cover w-100 h-100">
-  </div>
-
-  <!-- Texto sobreposto -->
-  <div class="position-absolute top-50 start-50 translate-middle text-center px-3 w-100">
-    <h1 class="fw-bold text-white" style="text-shadow: 2px 2px 4px #000; font-size: clamp(1.5rem, 5vw, 2.5rem);">
-      Laboratório de Pesquisa<br>Operacional e Sistemas Complexos
-    </h1>
-    <a href="/Site-ORCS-LAB/quemsomos/" class="btn btn-primary mt-3">Conheça</a>
+<!-- Banner responsivo com imagem e botão -->
+<section class="hero-section">
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1>Laboratório de Pesquisa<br>Operacional e Sistemas Complexos</h1>
+      <a href="/Site-ORCS-LAB/quemsomos/" class="btn btn-primary mt-3">Conheça</a>
+    </div>
   </div>
 </section>
 
 <!-- Seção de Serviços -->
-<section class="py-5 text-center bg-light">
-  <div class="container">
-    <h2 class="mb-4 fw-bold">Nossos Serviços</h2>
-    <div class="row gx-4 gy-4 justify-content-center">
-      <!-- Card 1 -->
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Serviço 1</h5>
-            <img src="{{ site.baseurl }}/assets/images/servico-1.jpg" alt="Serviço 1" class="img-fluid mb-3" style="height: 120px; object-fit: cover;">
-            <p class="card-text">Descrição breve do serviço 1 oferecido pelo laboratório.</p>
-            <a href="/Site-ORCS-LAB/servicos/#servico1" class="btn btn-primary">Saiba mais</a>
-          </div>
+<section style="padding: 50px 0; text-align: center;">
+  <h2><strong>Nossos Serviços</strong></h2>
+  <div class="row justify-content-center">
+    <!-- Card 1 -->
+    <div class="col-md-4 col-sm-6 mb-4">
+      <div class="card h-100">
+        <div class="card-body text-center">
+          <h5 class="card-title"><strong>Serviço 1</strong></h5>
+          <img src="{{ site.baseurl }}/assets/images/servico-1.jpg" alt="Serviço 1" class="img-fluid mb-3" style="width: 100%; max-height: 180px; object-fit: cover;">
+          <p class="card-text">Descrição breve do serviço 1 oferecido pelo laboratório.</p>
+          <a href="/Site-ORCS-LAB/servicos/#servico1" class="btn btn-primary">Saiba mais</a>
         </div>
       </div>
-
-      <!-- Card 2 -->
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Serviço 2</h5>
-            <img src="{{ site.baseurl }}/assets/images/servico-2.jpg" alt="Serviço 2" class="img-fluid mb-3" style="height: 120px; object-fit: cover;">
-            <p class="card-text">Descrição breve do serviço 2 oferecido pelo laboratório.</p>
-            <a href="/Site-ORCS-LAB/servicos/#servico2" class="btn btn-primary">Saiba mais</a>
-          </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="col-md-4 col-sm-6 mb-4">
+      <div class="card h-100">
+        <div class="card-body text-center">
+          <h5 class="card-title"><strong>Serviço 2</strong></h5>
+          <img src="{{ site.baseurl }}/assets/images/servico-2.jpg" alt="Serviço 2" class="img-fluid mb-3" style="width: 100%; max-height: 180px; object-fit: cover;">
+          <p class="card-text">Descrição breve do serviço 2 oferecido pelo laboratório.</p>
+          <a href="/Site-ORCS-LAB/servicos/#servico2" class="btn btn-primary">Saiba mais</a>
         </div>
       </div>
-
-      <!-- Card 3 -->
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold">Serviço 3</h5>
-            <img src="{{ site.baseurl }}/assets/images/servico-3.jpeg" alt="Serviço 3" class="img-fluid mb-3" style="height: 120px; object-fit: cover;">
-            <p class="card-text">Descrição breve do serviço 3 oferecido pelo laboratório.</p>
-            <a href="/Site-ORCS-LAB/servicos/#servico3" class="btn btn-primary">Saiba mais</a>
-          </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="col-md-4 col-sm-6 mb-4">
+      <div class="card h-100">
+        <div class="card-body text-center">
+          <h5 class="card-title"><strong>Serviço 3</strong></h5>
+          <img src="{{ site.baseurl }}/assets/images/servico-3.jpeg" alt="Serviço 3" class="img-fluid mb-3" style="width: 100%; max-height: 180px; object-fit: cover;">
+          <p class="card-text">Descrição breve do serviço 3 oferecido pelo laboratório.</p>
+          <a href="/Site-ORCS-LAB/servicos/#servico3" class="btn btn-primary">Saiba mais</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- CSS interno responsivo -->
+<style>
+/* Banner (desktop) */
+.hero-section {
+  position: relative;
+  background-image: url('{{ site.baseurl }}/assets/images/laboratorio.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hero-container {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: auto;
+}
+
+.hero-content {
+  color: white;
+  text-shadow: -1px -1px 0 #000080, 1px -1px 0 #000080, -1px 1px 0 #000080, 1px 1px 0 #000080;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    padding: 60px 20px;
+    background-image: none;
+    background-color: #003366;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content {
+    text-shadow: none;
+  }
+}
+</style>
