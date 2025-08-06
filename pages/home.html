@@ -5,10 +5,14 @@ title: Home
 ---
 
 <!-- Banner com imagem do laboratório e botão "Conheça" -->
-<section class="position-relative text-white" style="width: 100%;">
-  <img src="{{ site.baseurl }}/assets/images/laboratorio.jpeg" alt="Laboratório" class="img-fluid w-100" style="max-height: 600px; object-fit: cover;">
-  <div class="position-absolute top-50 start-0 translate-middle-y ps-4 pe-4">
-    <h1 class="display-5 fw-bold text-shadow text-white">
+<section class="position-relative text-white">
+  <div class="ratio ratio-16x9">
+    <img src="{{ site.baseurl }}/assets/images/laboratorio.jpeg" alt="Laboratório" class="img-fluid object-fit-cover w-100 h-100">
+  </div>
+
+  <!-- Texto sobreposto -->
+  <div class="position-absolute top-50 start-50 translate-middle text-center px-3 w-100">
+    <h1 class="fw-bold text-white" style="text-shadow: 2px 2px 4px #000; font-size: clamp(1.5rem, 5vw, 2.5rem);">
       Laboratório de Pesquisa<br>Operacional e Sistemas Complexos
     </h1>
     <a href="/Site-ORCS-LAB/quemsomos/" class="btn btn-primary mt-3">Conheça</a>
