@@ -231,12 +231,25 @@ h5 {
   transform: scale(1.1);
 }
 
-/* Estilo do botão hamburguer (usa ícone padrão Bootstrap 5) */
-.navbar-toggler {
-  background-color: #ffffff;
-  border-radius: 5px;
-  padding: 0.3rem 0.6rem;
+/* Estilo do botão hamburguer */
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
+
+.hamburger-bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s ease;
+  border-radius: 2px;
+}
+
 
 /* === Banner Responsivo da Página Home === */
 .banner-home {
