@@ -207,3 +207,41 @@ h5 {
   text-decoration: underline;
 }
 
+/* === Banner Responsivo da Página Home === */
+.banner-home {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-home img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 600px;
+}
+
+.banner-home .banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  color: white;
+}
+
+.banner-home .banner-text h1 {
+  font-size: 2rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px #000;
+}
+
+@media (min-width: 768px) {
+  .banner-home .banner-text h1 {
+    font-size: 2.5rem;
+  }
+}
+
+
