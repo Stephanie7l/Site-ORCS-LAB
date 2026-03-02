@@ -9,35 +9,43 @@ body {
   padding: 0;
 }
 
-a {
-  color: #005f99;
-  text-decoration: none;
-  transition: color 0.3s ease;
+/* ===== IMAGENS RESPONSIVAS ===== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-a:hover {
-  color: #66b2ff;
-}
-
-header,
+/* ===== HEADER ===== */
 .navbar {
   background-color: #003366;
-  color: #ffffff;
-  padding: 1rem;
 }
 
+.site-logo {
+  height: 80px;
+  width: auto;
+}
+
+.nav-link {
+  font-weight: 600;
+  color: #ffffff !important;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #66b2ff !important;
+  transform: scale(1.1);
+}
+
+/* ===== FOOTER ===== */
 footer {
   background-color: #003366;
   color: #ffffff !important;
   text-align: center;
-  padding: 1rem 0;
-  margin-top: 2rem;
-}
-
-footer p {
-  color: #ffffff !important;
-  opacity: 1 !important;
-  margin: 0.3rem 0;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
 }
 
 footer a {
@@ -46,19 +54,10 @@ footer a {
 }
 
 footer a:hover {
-  color: #66b2ff !important;
   text-decoration: underline;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  color: #003366;
-  margin-bottom: 0.5rem;
-}
-
+/* ===== BOTÕES ===== */
 .btn-primary {
   background-color: #005f99;
   border-color: #005f99;
@@ -72,220 +71,44 @@ h5 {
   color: #003366;
 }
 
-.section {
-  padding: 2rem 1rem;
-  margin-bottom: 2rem;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.logo-menu-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  gap: 2rem;
-}
-
-.logo-menu-wrapper nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.site-logo {
-  height: 100px;
-  width: auto;
-  display: block;
-  margin-right: 1rem;
-}
-
-.logo-menu-wrapper nav ul li {
-  position: relative;
-}
-
-/* Submenu (dropdown) */
-.logo-menu-wrapper nav ul li ul.submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #003366;
-  padding: 0.5rem;
-  display: none;
-  list-style: none;
-  flex-direction: column;
-  z-index: 1000;
-}
-
-.logo-menu-wrapper nav ul li:hover ul.submenu {
-  display: flex;
-}
-
-/* Estilo dos links do menu */
-.nav-link {
-  font-weight: 600;
-  color: #ffffff !important;
-  opacity: 1;
-  transition: transform 0.2s ease, color 0.2s ease;
-  display: inline-block;
-  min-width: 80px;
-  text-align: center;
-}
-
-.nav-link:hover {
-  color: #66b2ff !important; /* tom azul claro */
-  transform: scale(1.2); /* leve zoom para destacar */
-}
+/* ===== EQUIPE MELHORADA ===== */
 
 .card.team-member {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-.card.team-member .card-body {
-  flex-grow: 1;
-}
-
-.row .col-12.col-lg-6 {
-  display: flex;
+.card.team-member:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
 .card.team-member img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-}
-
-/* === Padronização de cards da equipe e alumni === */
-
-/* Garantir que os cards preencham igualmente as colunas */
-.card.team-member,
-.card.team-alumni {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.card.team-member .card-body,
-.card.team-alumni .card-body {
-  flex-grow: 1;
-}
-
-/* Forçar as colunas a manterem altura uniforme */
-.col-12.col-lg-6,
-.col-12.col-md-6,
-.col-sm-6 {
-  display: flex;
-}
-
-/* Padronização das imagens dos membros e alumni */
-.card.team-member img,
-.card.team-alumni img {
   width: 100px !important;
   height: 100px !important;
   object-fit: cover;
   border-radius: 50%;
-  display: block;
 }
 
-/* Deixa os links presentes na página de contatos em azul escuro */
+/* ===== LINKS CONTATO ===== */
 .link-personalizado {
-  color: inherit; /* azul escuro */
+  color: #003366;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-/* Deixa os links presentes na página de contatos em azul claro quando o usuário passa o cursor do mouse por cima */
 .link-personalizado:hover {
-  color: #66b2ff; /* azul claro ao passar o mouse */
+  color: #66b2ff;
   text-decoration: underline;
 }
 
-/* === RESPONSIVIDADE === */
-
-/* Estilização da logo */
-.site-logo {
-  height: 100px;
-  width: auto;
-}
-
-/* Estilização do menu responsivo */
-.navbar-nav .nav-link {
-  font-weight: 600;
-  color: #ffffff !important;
-  opacity: 0.85;
-  transition: transform 0.2s ease, color 0.2s ease;
-  display: inline-block;
-  min-width: 80px;
-  text-align: center;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #66b2ff !important;
-  transform: scale(1.1);
-}
-
-/* Estilo do botão hamburguer */
-.menu-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 6px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.hamburger-bar {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  transition: 0.3s ease;
-  border-radius: 2px;
-}
-
-
-/* === Banner Responsivo da Página Home === */
-.banner-home {
-  position: relative;
-  overflow: hidden;
-}
-
-.banner-home img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  max-height: 600px;
-}
-
-.banner-home .banner-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 1.5rem;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
-  color: white;
-}
-
-.banner-home .banner-text h1 {
-  font-size: 2rem;
-  line-height: 1.3;
-  margin-bottom: 1rem;
-  text-shadow: 1px 1px 2px #000;
-}
-
-@media (min-width: 768px) {
-  .banner-home .banner-text h1 {
-    font-size: 2.5rem;
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  .site-logo {
+    height: 60px;
   }
 }
-
-

@@ -1,40 +1,76 @@
-<header class="site-header">
-  <div class="container">
-    <div class="logo-menu-wrapper">
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
       <!-- Logo -->
-      <a href="/Site-ORCS-LAB/">
+      <a class="navbar-brand" href="{{ '/' | relative_url }}">
         <img
-          src="/Site-ORCS-LAB/assets/images/orcs_logo.png"
-          alt="Logo ORCS Lab"
+          src="{{ '/assets/images/orcs_logo.png' | relative_url }}"
+          alt="ORCS Lab"
           class="site-logo"
         />
       </a>
 
-      <!-- Menu de navegação -->
-      <nav>
-        <ul>
-          <li><a class="nav-link" href="/Site-ORCS-LAB/">Home</a></li>
-          <li>
-            <a class="nav-link" href="/Site-ORCS-LAB/quemsomos/">Quem Somos</a>
+      <!-- Botão Mobile -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarOrcs"
+        aria-controls="navbarOrcs"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="navbarOrcs">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ '/' | relative_url }}">Home</a>
           </li>
-          <li><a class="nav-link" href="/Site-ORCS-LAB/equipe/">Equipe</a></li>
-          <li>
-            <a class="nav-link" href="/Site-ORCS-LAB/estrutura/">Estrutura</a>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ '/quemsomos/' | relative_url }}"
+              >Quem Somos</a
+            >
           </li>
-          <li>
-            <a class="nav-link" href="/Site-ORCS-LAB/clientes-e-parceiros/">Apoiadores</a>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ '/equipe/' | relative_url }}"
+              >Equipe</a
+            >
           </li>
-          <li>
-            <a class="nav-link" href="/Site-ORCS-LAB/servicos/">Serviços</a>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ '/estrutura/' | relative_url }}"
+              >Estrutura</a
+            >
           </li>
-          <li>
-            <a class="nav-link" href="/Site-ORCS-LAB/acontece/">Acontece</a>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="{{ '/clientes-e-parceiros/' | relative_url }}"
+              >Apoiadores</a
+            >
           </li>
-          <li>
-            <a class="nav-link" href="/Site-ORCS-LAB/contato/">Contato</a>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ '/servicos/' | relative_url }}"
+              >Serviços</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ '/acontece/' | relative_url }}"
+              >Acontece</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link btn btn-primary ms-lg-3 px-3"
+              href="{{ '/contato/' | relative_url }}"
+            >
+              Contato
+            </a>
           </li>
         </ul>
-      </nav>
+      </div>
     </div>
-  </div>
+  </nav>
 </header>
