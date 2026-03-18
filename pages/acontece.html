@@ -5,33 +5,66 @@ permalink: /acontece/
 ---
 
 <div class="container my-5">
-  <h1 class="fs-2 fw-bold text-center mb-4">Acontece no ORCS Lab.</h1>
-  <br></br>
-  <div class="row">
-  
-    <!-- LinkedIn -->
-    <div class="col-md-6 mb-4">
-      <div class="card h-100 text-center">
-        <div class="card-body">
-          <i class="fab fa-linkedin fa-3x mb-3 text-primary"></i>
-          <h5 class="card-title fw-bold">Últimas do LinkedIn</h5>
-          <p class="card-text">Veja nossas publicações, eventos e destaques mais recentes no LinkedIn.</p>
-          <a href="https://www.linkedin.com/company/orcs-lab" target="_blank" class="btn btn-primary">Ver no LinkedIn</a>
-        </div>
+  <section class="page-hero mb-5">
+    <p class="page-hero-kicker mb-2">Atualizações</p>
+    <h1 class="page-hero-title">Acontece no ORCS Lab</h1>
+    <p class="page-hero-subtitle mb-0">
+      Acompanhe publicações, eventos e resultados recentes do laboratório.
+    </p>
+  </section>
+
+  <div class="row g-3 mb-4">
+    <div class="col-md-6">
+      <div class="info-card h-100 text-center">
+        <div class="info-card-icon d-inline-flex"><i class="bi bi-linkedin"></i></div>
+        <h3 class="mt-2">Últimas do LinkedIn</h3>
+        <p>Veja publicações, eventos e destaques institucionais mais recentes.</p>
+        <a href="https://www.linkedin.com/company/orcs-lab" target="_blank" class="btn btn-primary">Ver no LinkedIn</a>
       </div>
     </div>
 
-    <!-- ResearchGate -->
-    <div class="col-md-6 mb-4">
-      <div class="card h-100 text-center">
-        <div class="card-body">
-          <i class="fas fa-flask fa-3x mb-3 text-success"></i>
-          <h5 class="card-title fw-bold">Atualizações no ResearchGate</h5>
-          <p class="card-text">Acompanhe nossas publicações científicas, projetos e interações acadêmicas.</p>
-          <a href="https://www.researchgate.net/lab/ORCS-LAB" target="_blank" class="btn btn-primary">Ver no ResearchGate</a>
-        </div>
+    <div class="col-md-6">
+      <div class="info-card h-100 text-center">
+        <div class="info-card-icon d-inline-flex"><i class="bi bi-journal-richtext"></i></div>
+        <h3 class="mt-2">Atualizações no ResearchGate</h3>
+        <p>Acompanhe nossas publicações científicas, projetos e interações acadêmicas.</p>
+        <a href="https://www.researchgate.net/lab/ORCS-LAB" target="_blank" class="btn btn-primary">Ver no ResearchGate</a>
       </div>
     </div>
   </div>
+
+  <section class="page-block">
+    <h2 class="section-block-title mb-3">O que você encontra aqui</h2>
+    <div class="row g-3">
+      <div class="col-12 col-lg-4">
+        <article class="info-card h-100">
+          <div class="info-card-icon"><i class="bi bi-calendar-event"></i></div>
+          <h3>Eventos</h3>
+          <p>Participações em congressos, palestras, workshops e atividades de extensão.</p>
+        </article>
+      </div>
+      <div class="col-12 col-lg-4">
+        <article class="info-card h-100">
+          <div class="info-card-icon"><i class="bi bi-newspaper"></i></div>
+          <h3>Publicações</h3>
+          <p>Novos artigos, capítulos e relatórios técnicos com resultados de pesquisa aplicada.</p>
+        </article>
+      </div>
+      <div class="col-12 col-lg-4">
+        <article class="info-card h-100">
+          <div class="info-card-icon"><i class="bi bi-award"></i></div>
+          <h3>Destaques</h3>
+          <p>Parcerias, reconhecimentos e marcos relevantes do ORCS Lab.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-strip text-center mt-4">
+    <h2>Quer receber atualizações do laboratório?</h2>
+    <p class="mb-3">Siga nossos canais oficiais e acompanhe novidades em tempo real.</p>
+    <a href="{{ '/contato/' | relative_url }}" class="btn btn-primary px-4">Falar com a equipe</a>
+  </section>
+
 </div>
 
