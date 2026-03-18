@@ -4,63 +4,138 @@ permalink: /
 title: Home
 ---
 
+<section class="home-hero">
+  <img
+    src="{{ '/assets/images/laboratorio.jpeg' | relative_url }}"
+    alt="Campus da UFMG"
+    class="home-hero-bg"
+  />
+  <div class="home-hero-overlay"></div>
 
-<!-- Banner com imagem do laboratório e botão "Conheça" -->
-<section style="position: relative; text-align: left;">
-  <img src="{{ site.baseurl }}/assets/images/laboratorio.jpeg" alt="Laboratório" style="width: 100%;">
-  <div style="position: absolute; top: 30%; left: 5%;">
-    <h1 style="font-size: 2.5rem; color: white; font-weight: bold;
-               text-shadow: -1px -1px 0 #000080, 1px -1px 0 #000080, -1px 1px 0 #000080, 1px 1px 0 #000080;">
-      Laboratório de Pesquisa<br>Operacional e Sistemas Complexos
-    </h1>
-    <a href="/Site-ORCS-LAB/quemsomos/" class="btn btn-primary mt-3">Conheça</a>
+  <div class="container home-hero-content-wrap">
+    <div class="row align-items-start g-4">
+      <div class="col-lg-7 home-hero-content">
+        <p class="home-kicker mb-2">Bem-vindo ao</p>
+        <h1 class="home-hero-title mb-2">ORCS - Lab</h1>
+        <p class="home-hero-subtitle mb-4">
+          Laboratório de Pesquisa Operacional e Sistemas Complexos<br />
+          Escola de Engenharia - UFMG
+        </p>
+        <a href="{{ '/quemsomos/' | relative_url }}" class="btn btn-primary btn-lg px-4"
+          >Saiba Mais</a
+        >
+      </div>
+
+      <div class="col-lg-5">
+        <aside class="home-contact-card" aria-label="Contato rápido">
+          <div class="home-contact-item home-contact-top">
+            <span class="home-contact-icon"><i class="bi bi-telephone-fill"></i></span>
+            <div>
+              <h3>Serviço 1</h3>
+              <p>(31) 3409-XXXX</p>
+            </div>
+            <button class="btn btn-light btn-sm home-copy-btn" type="button">Copiar</button>
+          </div>
+
+          <div class="home-contact-item">
+            <span class="home-contact-icon"><i class="bi bi-whatsapp"></i></span>
+            <div>
+              <h3>WhatsApp</h3>
+              <p>(31) 999XX-XXXX</p>
+            </div>
+          </div>
+
+          <div class="home-contact-item">
+            <span class="home-contact-icon"><i class="bi bi-linkedin"></i></span>
+            <div>
+              <h3>LinkedIn</h3>
+              <p>/company/orcslab</p>
+            </div>
+          </div>
+
+          <div class="home-contact-item">
+            <span class="home-contact-icon"><i class="bi bi-geo-alt-fill"></i></span>
+            <div>
+              <h3>Endereço</h3>
+              <p>EE-UFMG - Belo Horizonte, MG</p>
+            </div>
+          </div>
+
+          <div class="home-contact-socials">
+            <a href="{{ '/contato/' | relative_url }}" aria-label="Contato">
+              <i class="bi bi-envelope-fill"></i>
+            </a>
+            <a href="{{ site.linkedin_url }}" target="_blank" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Seção de Serviços -->
-<section style="padding: 50px 0; text-align: center;">
-  <h2><strong>Nossos Serviços</strong></h2>
-  <br>
+<section class="home-intro py-5">
   <div class="container">
-    <div class="row justify-content-center gx-2 gy-4">
-      
-      <!-- Card 1 -->
-      <div class="col-md-3">
-        <div class="card h-100" style="padding: 10px;">
-          <div class="card-body text-center">
-            <h5 class="card-title"><strong>Serviço 1</strong></h5>
-            <img src="{{ site.baseurl }}/assets/images/servico-1.jpg" alt="Serviço 1"
-              class="img-fluid mb-3" style="width: 150px; height: 120px;">
-            <p class="card-text">Descrição breve do serviço 1 oferecido pelo laboratório.</p>
-            <a href="/Site-ORCS-LAB/servicos/#servico1" class="btn btn-primary">Saiba mais</a>
-          </div>
+    <div class="row align-items-center g-4">
+      <div class="col-lg-6">
+        <h2 class="home-section-title">Nossos Serviços</h2>
+        <p class="home-intro-text">
+          Somos um laboratório dedicado à pesquisa em Pesquisa Operacional,
+          Inteligência Computacional e Sistemas Complexos, promovendo inovação
+          e excelência científica.
+        </p>
+        <a href="{{ '/quemsomos/' | relative_url }}" class="btn btn-primary px-4"
+          >Conheça o Laboratório</a
+        >
+      </div>
+      <div class="col-lg-6">
+        <div class="home-intro-image-wrap">
+          <img
+            src="{{ '/assets/images/servico-1.jpg' | relative_url }}"
+            alt="Equipe em reunião no laboratório"
+            class="home-intro-image"
+          />
         </div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <!-- Card 2 -->
-      <div class="col-md-3">
-        <div class="card h-100" style="padding: 10px;">
-          <div class="card-body text-center">
-            <h5 class="card-title"><strong>Serviço 2</strong></h5>
-            <img src="{{ site.baseurl }}/assets/images/servico-2.jpg" alt="Serviço 2"
-              class="img-fluid mb-3" style="width: 150px; height: 120px;">
-            <p class="card-text">Descrição breve do serviço 2 oferecido pelo laboratório.</p>
-            <a href="/Site-ORCS-LAB/servicos/#servico2" class="btn btn-primary">Saiba mais</a>
-          </div>
-        </div>
+<section class="home-services pb-5">
+  <div class="container">
+    <h2 class="home-section-title text-center mb-4">Nossos Serviços</h2>
+    <div class="row g-3">
+      <div class="col-6 col-lg-3">
+        <article class="home-service-card h-100">
+          <h3>Serviço 1</h3>
+          <p>Descrição curta do serviço 1.</p>
+          <a href="{{ '/servicos/#servico1' | relative_url }}" class="btn btn-primary btn-sm px-3">Saiba Mais</a>
+        </article>
       </div>
 
-      <!-- Card 3 -->
-      <div class="col-md-3">
-        <div class="card h-100" style="padding: 10px;">
-          <div class="card-body text-center">
-            <h5 class="card-title"><strong>Serviço 3</strong></h5>
-            <img src="{{ site.baseurl }}/assets/images/servico-3.jpeg" alt="Serviço 3"
-              class="img-fluid mb-3" style="width: 150px; height: 120px;">
-            <p class="card-text">Descrição breve do serviço 3 oferecido pelo laboratório.</p>
-            <a href="/Site-ORCS-LAB/servicos/#servico3" class="btn btn-primary">Saiba mais</a>
-          </div>
-        </div>
+      <div class="col-6 col-lg-3">
+        <article class="home-service-card h-100">
+          <h3>Serviço 2</h3>
+          <p>Descrição curta do serviço 2.</p>
+          <a href="{{ '/servicos/#servico2' | relative_url }}" class="btn btn-primary btn-sm px-3">Saiba Mais</a>
+        </article>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <article class="home-service-card h-100">
+          <h3>Serviço 3</h3>
+          <p>Descrição curta do serviço 3.</p>
+          <a href="{{ '/servicos/#servico3' | relative_url }}" class="btn btn-primary btn-sm px-3">Saiba Mais</a>
+        </article>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <article class="home-service-card h-100">
+          <h3>Consultoria</h3>
+          <p>Projetos sob demanda para empresas e setor público.</p>
+          <a href="{{ '/contato/' | relative_url }}" class="btn btn-primary btn-sm px-3">Saiba Mais</a>
+        </article>
       </div>
     </div>
   </div>

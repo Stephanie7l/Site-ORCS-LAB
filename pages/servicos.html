@@ -5,35 +5,41 @@ title: Serviços
 ---
 
 <div class="container my-5">
-  <h1 class="fs-2 fw-bold text-center mb-4">Nossos Serviços</h1>
+  <h1 class="fs-2 fw-bold text-center mb-4 service-page-title">Soluções para Empresas e Organizações</h1>
 
-  <!-- Serviço 1 -->
-  <div id="servico1" class="d-flex align-items-center bg-light p-4 rounded shadow-sm mb-4" style="gap: 24px;">
-    <img src="{{ site.baseurl }}/assets/images/servico-1.jpg" alt="Serviço 1" class="img-fluid rounded" style="width: 180px; height: 120px; object-fit: cover;">
+  <div id="servico1" class="service-block">
+    <img src="{{ '/assets/images/servico-1.jpg' | relative_url }}" alt="Otimização de processos" class="img-fluid rounded">
     <div>
-      <h4 class="fw-bold mb-2">Serviço 1</h4>
-      <p class="mb-3">Texto explicativo sobre o serviço 1.</p>
-      <a href="https://wa.me/553134093550" target="_blank" class="btn btn-primary fw-bold">Entrar em contato</a>
+      <h4 class="fw-bold mb-2">Otimização de Processos e Recursos</h4>
+      <p class="mb-3">Modelagem matemática e algoritmos para reduzir custos, melhorar eficiência operacional e apoiar decisões sob múltiplos critérios.</p>
+      <a href="{{ '/contato/' | relative_url }}" class="btn btn-primary fw-bold">Solicitar proposta</a>
     </div>
   </div>
 
-  <!-- Serviço 2 -->
-  <div id="servico2" class="d-flex align-items-center bg-light p-4 rounded shadow-sm mb-4" style="gap: 24px;">
-    <img src="{{ site.baseurl }}/assets/images/servico-2.jpg" alt="Serviço 2" class="img-fluid rounded" style="width: 180px; height: 120px; object-fit: cover;">
+  <div id="servico2" class="service-block">
+    <img src="{{ '/assets/images/servico-2.jpg' | relative_url }}" alt="Analise de dados e inteligencia computacional" class="img-fluid rounded">
     <div>
-      <h4 class="fw-bold mb-2">Serviço 2</h4>
-      <p class="mb-3">Texto explicativo sobre o serviço 2.</p>
-      <a href="https://wa.me/553134093550" target="_blank" class="btn btn-primary fw-bold">Entrar em contato</a>
+      <h4 class="fw-bold mb-2">Análise de Dados e Inteligência Computacional</h4>
+      <p class="mb-3">Desenvolvimento de modelos preditivos, análise estatística robusta e soluções orientadas por dados para problemas complexos da indústria e do setor público.</p>
+      <a href="{{ '/contato/' | relative_url }}" class="btn btn-primary fw-bold">Solicitar proposta</a>
     </div>
   </div>
 
-  <!-- Serviço 3 -->
-  <div id="servico3" class="d-flex align-items-center bg-light p-4 rounded shadow-sm mb-4" style="gap: 24px;">
-    <img src="{{ site.baseurl }}/assets/images/servico-3.jpeg" alt="Serviço 3" class="img-fluid rounded" style="width: 180px; height: 120px; object-fit: cover;">
+  <div id="servico3" class="service-block">
+    <img src="{{ '/assets/images/servico-3.jpeg' | relative_url }}" alt="Simulacao e sistemas complexos" class="img-fluid rounded">
     <div>
-      <h4 class="fw-bold mb-2">Serviço 3</h4>
-      <p class="mb-3">Texto explicativo sobre o serviço 3.</p>
-      <a href="https://wa.me/553134093550" target="_blank" class="btn btn-primary fw-bold">Entrar em contato</a>
+      <h4 class="fw-bold mb-2">Simulação de Sistemas Complexos</h4>
+      <p class="mb-3">Criação de cenários e análises de risco para planejamento logístico, sistemas energéticos e operações com alta incerteza.</p>
+      <a href="{{ '/contato/' | relative_url }}" class="btn btn-primary fw-bold">Solicitar proposta</a>
+    </div>
+  </div>
+
+  <div class="service-block">
+    <img src="{{ '/assets/images/orcs.jpeg' | relative_url }}" alt="Consultoria cientifica aplicada" class="img-fluid rounded">
+    <div>
+      <h4 class="fw-bold mb-2">Consultoria Científica Aplicada</h4>
+      <p class="mb-3">Apoio técnico especializado para estruturar projetos, validar metodologias e transformar desafios reais em soluções mensuráveis.</p>
+      <a href="{{ '/contato/' | relative_url }}" class="btn btn-primary fw-bold">Falar com o laboratório</a>
     </div>
   </div>
 </div>

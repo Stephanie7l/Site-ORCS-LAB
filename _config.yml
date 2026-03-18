@@ -1,0 +1,32 @@
+# -------------------------------------------------------------------------------
+# Site settings
+# -------------------------------------------------------------------------------
+
+title: ORCS Lab @ UFMG
+
+author: ORCS Team
+email: andre.maravilha@outlook.com
+
+description: >-
+  Operations Research and Complex System Lab
+
+baseurl: ""
+url: "https://orcslab.github.io/"
+
+github_url: https://github.com/orcslab
+linkedin_url: https://www.linkedin.com/company/orcslab
+researchgate_url: https://www.researchgate.net/lab/ORCSLab-Lucas-Batista
+
+# -------------------------------------------------------------------------------
+# Build settings
+# -------------------------------------------------------------------------------
+
+include:
+  - .htaccess
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+
+paginate: 10
+paginate_path: "/news/:num"

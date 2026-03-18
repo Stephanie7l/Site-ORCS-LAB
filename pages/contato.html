@@ -12,6 +12,68 @@ title: Contato
       serviços.
     </p>
   </div>
+
+  <div class="row mb-5">
+    <div class="col-12">
+      <div class="contact-form-card">
+        <h2 class="h4 fw-bold mb-3">Solicitar Projeto ou Parceria</h2>
+        <p class="mb-4">
+          Preencha os dados abaixo e retornaremos com direcionamento técnico inicial.
+        </p>
+
+        <form action="mailto:{{ site.email }}" method="post" enctype="text/plain">
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" id="nome" name="Nome" class="form-control" required>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="organizacao" class="form-label">Empresa/Organização</label>
+              <input type="text" id="organizacao" name="Organizacao" class="form-control" required>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="email" class="form-label">E-mail</label>
+              <input type="email" id="email" name="Email" class="form-control" required>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="telefone" class="form-label">Telefone</label>
+              <input type="tel" id="telefone" name="Telefone" class="form-control">
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="tipo" class="form-label">Tipo de demanda</label>
+              <select id="tipo" name="Tipo de demanda" class="form-select" required>
+                <option value="" selected disabled>Selecione</option>
+                <option>Otimização de processos</option>
+                <option>Análise de dados</option>
+                <option>Simulação de sistemas</option>
+                <option>Consultoria científica</option>
+                <option>Outro</option>
+              </select>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="prazo" class="form-label">Prazo estimado</label>
+              <input type="text" id="prazo" name="Prazo" class="form-control" placeholder="Ex: 3 meses">
+            </div>
+
+            <div class="col-12">
+              <label for="mensagem" class="form-label">Descreva brevemente o desafio</label>
+              <textarea id="mensagem" name="Mensagem" class="form-control" rows="4" required></textarea>
+            </div>
+
+            <div class="col-12 d-flex justify-content-end">
+              <button type="submit" class="btn btn-primary px-4">Enviar solicitação</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <div class="row">
   <!-- Coluna: Informações de Contato -->
   <div class="col-12 col-lg-6 mb-4">
