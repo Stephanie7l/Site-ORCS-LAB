@@ -145,8 +145,8 @@ footer a:hover {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   transition:
     transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
+    box-shadow 0.25s ease;  height: 100%;
+  min-height: 220px;}
 
 .card.team-member:hover {
   transform: translateY(-6px);
@@ -193,6 +193,26 @@ footer a:hover {
   background:
     linear-gradient(100deg, rgba(0, 51, 102, 0.82) 0%, rgba(0, 51, 102, 0.65) 42%, rgba(0, 51, 102, 0.12) 80%),
     linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.28));
+}
+
+.home-hero-wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,50 Q300,0 600,50 T1200,50 L1200,120 L0,120 Z" fill="%23f4f6f8"></path></svg>') repeat-x;
+  background-size: 600px 100px;
+  animation: wave 15s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 600px 0;
+  }
 }
 
 .home-hero-content-wrap {
@@ -316,16 +336,27 @@ footer a:hover {
   margin-top: 0.2rem;
 }
 
+.home-acontece {
+  background: #f4f6f8;
+  margin-top: 2rem;
+}
+
 .home-service-card {
   border-radius: 14px;
   background:
     linear-gradient(160deg, rgba(231, 245, 255, 0.85) 0%, rgba(255, 255, 255, 0.98) 55%),
     radial-gradient(circle at top left, rgba(87, 165, 227, 0.15), transparent 55%);
   border: 1px solid #d8e7f5;
-  box-shadow: 0 4px 16px rgba(0, 51, 102, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.home-service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 51, 102, 0.12);
 }
 
 .home-service-card h3 {
@@ -483,27 +514,31 @@ footer a:hover {
 .info-card-icon {
   width: 42px;
   height: 42px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
   font-size: 1.25rem;
   background: #e6f2ff;
   color: var(--orcs-blue-700);
-  margin-bottom: 0.6rem;
+  margin-right: 0.8rem;
+  margin-bottom: 0;
+  flex-shrink: 0;
 }
 
 .info-card h3 {
   font-size: 1.16rem;
   color: var(--orcs-text-strong);
   margin-bottom: 0.4rem;
-  text-align: center;
+  font-weight: 700;
+  margin: 0;
 }
 
 .info-card p {
   color: var(--orcs-text-muted);
-  margin-bottom: 0;
+  margin-bottom: 0.8rem;
   text-align: justify;
+  clear: both;
 }
 
 .metric-card {
@@ -513,6 +548,12 @@ footer a:hover {
   box-shadow: 0 6px 16px rgba(0, 51, 102, 0.08);
   padding: 1rem;
   text-align: center;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 }
 
 .metric-card h3 {
@@ -527,20 +568,24 @@ footer a:hover {
 }
 
 .cta-strip {
-  background: linear-gradient(130deg, #edf7ff 0%, #ffffff 82%);
-  border: 1px solid #d7e7f4;
-  border-radius: 14px;
-  padding: 1.5rem;
+  background: linear-gradient(135deg, #cfe8ff 0%, #e8f4ff 50%, #f0f9ff 100%);
+  border: 2px solid var(--orcs-blue-500);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 8px 32px rgba(45, 122, 192, 0.15);
+  margin-top: 2rem;
 }
 
 .cta-strip h2 {
-  color: var(--orcs-text-strong);
-  font-size: 1.5rem;
-  margin-bottom: 0.35rem;
+  color: var(--orcs-blue-900);
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
 }
 
 .cta-strip p {
   color: var(--orcs-text-muted);
+  font-size: 1.05rem;
 }
 
 .service-bullets {
@@ -557,9 +602,15 @@ footer a:hover {
   background: var(--orcs-white);
   border: 1px solid #d8e7f4;
   border-radius: 14px;
-  box-shadow: 0 6px 16px rgba(0, 51, 102, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   padding: 1rem;
   text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 51, 102, 0.12);
 }
 
 .partner-card h3 {
@@ -597,6 +648,20 @@ footer a:hover {
   border-radius: 12px;
   padding: 0.75rem;
   box-shadow: 0 4px 14px rgba(0, 51, 102, 0.08);
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.alumni-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 51, 102, 0.12);
+}
+
+.alumni-card img {
+  width: 100px !important;
+  height: 100px !important;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 /* ===== RESPONSIVIDADE ===== */

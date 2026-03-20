@@ -13,66 +13,23 @@ title: Home
   <div class="home-hero-overlay"></div>
 
   <div class="container home-hero-content-wrap">
-    <div class="row align-items-start g-4">
-      <div class="col-lg-7 home-hero-content">
-        <p class="home-kicker mb-2">Bem-vindo ao</p>
-        <h1 class="home-hero-title mb-2">ORCS - Lab</h1>
-        <p class="home-hero-subtitle mb-4">
-          Laboratório de Pesquisa Operacional e Sistemas Complexos<br />
-          Escola de Engenharia - UFMG
-        </p>
-        <a href="{{ '/quemsomos/' | relative_url }}" class="btn btn-primary btn-lg px-4"
-          >Saiba Mais</a
-        >
-      </div>
-
-      <div class="col-lg-5">
-        <aside class="home-contact-card" aria-label="Contato rápido">
-          <div class="home-contact-item home-contact-top">
-            <span class="home-contact-icon"><i class="bi bi-telephone-fill"></i></span>
-            <div>
-              <h3>Telefone</h3>
-              <p>(31) 3409-XXXX</p>
-            </div>
-            <button class="btn btn-light btn-sm home-copy-btn" type="button">Copiar</button>
-          </div>
-
-          <div class="home-contact-item">
-            <span class="home-contact-icon"><i class="bi bi-whatsapp"></i></span>
-            <div>
-              <h3>WhatsApp</h3>
-              <p>(31) 999XX-XXXX</p>
-            </div>
-          </div>
-
-          <div class="home-contact-item">
-            <span class="home-contact-icon"><i class="bi bi-linkedin"></i></span>
-            <div>
-              <h3>LinkedIn</h3>
-              <p>/company/orcslab</p>
-            </div>
-          </div>
-
-          <div class="home-contact-item">
-            <span class="home-contact-icon"><i class="bi bi-geo-alt-fill"></i></span>
-            <div>
-              <h3>Endereço</h3>
-              <p>EE-UFMG - Belo Horizonte, MG</p>
-            </div>
-          </div>
-
-          <div class="home-contact-socials">
-            <a href="{{ '/contato/' | relative_url }}" aria-label="Contato">
-              <i class="bi bi-envelope-fill"></i>
-            </a>
-            <a href="{{ site.linkedin_url }}" target="_blank" aria-label="LinkedIn">
-              <i class="bi bi-linkedin"></i>
-            </a>
-          </div>
-        </aside>
+    <div class="row">
+      <div class="col-lg-6 offset-lg-0">
+        <div class="home-hero-content">
+          <p class="home-kicker mb-2">Bem-vindo ao</p>
+          <h1 class="home-hero-title mb-2">ORCS - Lab</h1>
+          <p class="home-hero-subtitle mb-4">
+            Laboratório de Pesquisa Operacional e Sistemas Complexos<br />
+            Escola de Engenharia - UFMG
+          </p>
+          <a href="{{ '/quemsomos/' | relative_url }}" class="btn btn-primary btn-lg px-4"
+            >Saiba Mais</a
+          >
+        </div>
       </div>
     </div>
   </div>
+  <div class="home-hero-wave"></div>
 </section>
 
 <section class="home-services pb-5">
@@ -81,7 +38,7 @@ title: Home
     <div class="row g-3">
       <div class="col-6 col-lg-3">
         <article class="home-service-card h-100">
-          <img src="{{ '/assets/images/servico-1.jpg' | relative_url }}" alt="Serviço de Otimização de Processos e Recursos" class="home-service-media" />
+          <img src="{{ '/assets/images/Serviço 1 - Otimização de Processos e Recursos.png' | relative_url }}" alt="Serviço de Otimização de Processos e Recursos" class="home-service-media" />
           <h3 class="text-center">Otimização de Processos e Recursos</h3>
           <p class="text-justify">Modelagem matemática e algoritmos para reduzir custos e melhorar eficiência operacional.</p>
           <a href="{{ '/contato/' | relative_url }}" class="btn btn-primary btn-sm px-3">Solicitar proposta</a>
@@ -90,7 +47,7 @@ title: Home
 
       <div class="col-6 col-lg-3">
         <article class="home-service-card h-100">
-          <img src="{{ '/assets/images/servico-2.jpg' | relative_url }}" alt="Serviço de Análise de Dados e Inteligência Computacional" class="home-service-media" />
+          <img src="{{ '/assets/images/Serviço 2 - Análise de Dados e Inteligência Computacional.png' | relative_url }}" alt="Serviço de Análise de Dados e Inteligência Computacional" class="home-service-media" />
           <h3 class="text-center">Análise de Dados e Inteligência Computacional</h3>
           <p class="text-justify">Modelos preditivos e análise estatística robusta para problemas complexos.</p>
           <a href="{{ '/contato/' | relative_url }}" class="btn btn-primary btn-sm px-3">Solicitar proposta</a>
@@ -99,7 +56,7 @@ title: Home
 
       <div class="col-6 col-lg-3">
         <article class="home-service-card h-100">
-          <img src="{{ '/assets/images/servico-3.jpeg' | relative_url }}" alt="Serviço de Simulação de Sistemas Complexos" class="home-service-media" />
+          <img src="{{ '/assets/images/Serviço 3 - Simulação de Sistemas Complexos.png' | relative_url }}" alt="Serviço de Simulação de Sistemas Complexos" class="home-service-media" />
           <h3 class="text-center">Simulação de Sistemas Complexos</h3>
           <p class="text-justify">Criação de cenários e análise de risco para planejamento logístico e energético.</p>
           <a href="{{ '/contato/' | relative_url }}" class="btn btn-primary btn-sm px-3">Solicitar proposta</a>
@@ -108,10 +65,44 @@ title: Home
 
       <div class="col-6 col-lg-3">
         <article class="home-service-card h-100">
-          <img src="{{ '/assets/images/laboratorio.jpeg' | relative_url }}" alt="Serviço de Consultoria Científica Aplicada" class="home-service-media" />
+          <img src="{{ '/assets/images/Serviço 4 - Consultoria Científica Aplicada.png' | relative_url }}" alt="Serviço de Consultoria Científica Aplicada" class="home-service-media" />
           <h3 class="text-center">Consultoria Científica Aplicada</h3>
           <p class="text-justify">Apoio técnico para estruturar projetos e validar metodologias com foco em impacto.</p>
           <a href="{{ '/contato/' | relative_url }}" class="btn btn-primary btn-sm px-3">Solicitar proposta</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-acontece py-5">
+  <div class="container">
+    <h2 class="home-section-title text-center mb-4">Acontece no ORCS Lab</h2>
+    <div class="row g-3">
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="info-card h-100 text-center">
+          <div class="info-card-icon d-inline-flex"><i class="bi bi-linkedin"></i></div>
+          <h3 class="mt-2">Últimas do LinkedIn</h3>
+          <p>Veja publicações, eventos e destaques institucionais mais recentes.</p>
+          <a href="https://www.linkedin.com/company/orcs-lab" target="_blank" class="btn btn-primary">Ver no LinkedIn</a>
+        </article>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="info-card h-100 text-center">
+          <div class="info-card-icon d-inline-flex"><i class="bi bi-journal-richtext"></i></div>
+          <h3 class="mt-2">Atualizações no ResearchGate</h3>
+          <p>Acompanhe nossas publicações científicas, projetos e interações acadêmicas.</p>
+          <a href="https://www.researchgate.net/lab/ORCS-LAB" target="_blank" class="btn btn-primary">Ver no ResearchGate</a>
+        </article>
+      </div>
+
+      <div class="col-12 col-md-12 col-lg-4">
+        <article class="info-card h-100 text-center">
+          <div class="info-card-icon d-inline-flex"><i class="bi bi-calendar-event"></i></div>
+          <h3 class="mt-2">Saiba Mais</h3>
+          <p>Conheça nossos projetos, eventos e destaques recentes do laboratório.</p>
+          <a href="{{ '/acontece/' | relative_url }}" class="btn btn-primary">Ir para Acontece</a>
         </article>
       </div>
     </div>
