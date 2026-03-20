@@ -200,10 +200,11 @@ footer a:hover {
   bottom: -1px;
   left: 0;
   width: 100%;
-  height: 100px;
-  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,50 Q300,0 600,50 T1200,50 L1200,120 L0,120 Z" fill="%23f4f6f8"></path></svg>') repeat-x;
-  background-size: 600px 100px;
-  animation: wave 15s linear infinite;
+  height: 120px;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,60 Q300,20 600,60 T1200,60 L1200,120 L0,120 Z" fill="%23f4f6f8" opacity="0.95"></path><path d="M0,70 Q300,40 600,70 T1200,70 L1200,120 L0,120 Z" fill="%23ffffff" opacity="0.3"></path></svg>') repeat-x;
+  background-size: 600px 120px;
+  animation: wave 18s linear infinite;
+  z-index: 3;
 }
 
 @keyframes wave {
@@ -352,18 +353,20 @@ footer a:hover {
   display: flex;
   flex-direction: column;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: 100%;
 }
 
 .home-service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 25px rgba(0, 51, 102, 0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 51, 102, 0.16);
 }
 
 .home-service-card h3 {
   font-size: 1.2rem;
-  margin: 0 0 0.5rem;
+  margin: 0.5rem 0;
   color: var(--orcs-text-strong);
   text-align: center;
+  font-weight: 700;
 }
 
 .home-service-media {
@@ -396,8 +399,14 @@ footer a:hover {
   border: 1px solid #d9e9f7;
   border-radius: 14px;
   padding: 1.5rem;
-  box-shadow: 0 6px 18px rgba(0, 51, 102, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   margin-bottom: 1rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-block:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 51, 102, 0.12);
 }
 
 .service-block img {
@@ -423,7 +432,13 @@ footer a:hover {
   border: 1px solid #d7e6f5;
   border-radius: 14px;
   padding: 1.25rem;
-  box-shadow: 0 6px 18px rgba(0, 51, 102, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-form-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 51, 102, 0.12);
 }
 
 .contact-form-card .form-label {
@@ -495,6 +510,12 @@ footer a:hover {
   border: 1px solid #d8e7f5;
   border-radius: 16px;
   padding: 1.25rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.page-block:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 51, 102, 0.12);
 }
 
 .section-block-title {
@@ -521,7 +542,7 @@ footer a:hover {
   font-size: 1.25rem;
   background: #e6f2ff;
   color: var(--orcs-blue-700);
-  margin-right: 0.8rem;
+  margin-right: 1.2rem;
   margin-bottom: 0;
   flex-shrink: 0;
 }
@@ -568,24 +589,54 @@ footer a:hover {
 }
 
 .cta-strip {
-  background: linear-gradient(135deg, #cfe8ff 0%, #e8f4ff 50%, #f0f9ff 100%);
-  border: 2px solid var(--orcs-blue-500);
+  background: linear-gradient(135deg, #2d7ac0 0%, #005f99 50%, #003366 100%);
+  border: 3px solid var(--orcs-blue-200);
   border-radius: 16px;
-  padding: 2.5rem 2rem;
-  box-shadow: 0 8px 32px rgba(45, 122, 192, 0.15);
+  padding: 3rem 2.5rem;
+  box-shadow: 0 12px 40px rgba(45, 122, 192, 0.3);
   margin-top: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-strip::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
 }
 
 .cta-strip h2 {
-  color: var(--orcs-blue-900);
-  font-size: 1.75rem;
-  margin-bottom: 0.5rem;
+  color: var(--orcs-white);
+  font-size: 1.9rem;
+  margin-bottom: 0.6rem;
   font-weight: 700;
+  position: relative;
+  z-index: 1;
 }
 
 .cta-strip p {
-  color: var(--orcs-text-muted);
-  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-strip .btn {
+  position: relative;
+  z-index: 1;
+  background-color: var(--orcs-white);
+  color: var(--orcs-blue-900) !important;
+  font-weight: 600;
+  border: none;
+}
+
+.cta-strip .btn:hover {
+  background-color: var(--orcs-blue-200);
 }
 
 .service-bullets {
@@ -635,6 +686,7 @@ footer a:hover {
 
 .team-card-rich .card-body {
   padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
 }
 
 .team-name {
@@ -646,22 +698,42 @@ footer a:hover {
   background: var(--orcs-white);
   border: 1px solid #d8e6f4;
   border-radius: 12px;
-  padding: 0.75rem;
+  padding: 0.9rem;
   box-shadow: 0 4px 14px rgba(0, 51, 102, 0.08);
   text-align: center;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .alumni-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 25px rgba(0, 51, 102, 0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 51, 102, 0.16);
 }
 
 .alumni-card img {
-  width: 100px !important;
-  height: 100px !important;
+  width: 120px !important;
+  height: 120px !important;
   object-fit: cover;
   border-radius: 50%;
+  margin-bottom: 0.8rem;
+  border: 3px solid #e6f2ff;
+}
+
+.alumni-card h6 {
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+  min-height: 2.4em;
+  display: flex;
+  align-items: center;
+}
+
+.alumni-card p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
 }
 
 /* ===== RESPONSIVIDADE ===== */
@@ -676,7 +748,7 @@ footer a:hover {
 
   .home-hero-content-wrap {
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 5rem;
   }
 
   .home-kicker {
@@ -691,16 +763,8 @@ footer a:hover {
     font-size: 1rem;
   }
 
-  .home-contact-card {
-    margin-top: 0.5rem;
-  }
-
   .home-section-title {
     font-size: 1.8rem;
-  }
-
-  .home-intro-image {
-    height: 220px;
   }
 
   .service-block {
@@ -755,11 +819,31 @@ footer a:hover {
     padding: 0.8rem;
   }
 
+  .alumni-card {
+    padding: 0.8rem;
+  }
+
+  .card.team-member {
+    min-height: 200px;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     word-break: break-word;
   }
 
   p {
+    font-size: 0.95rem;
+  }
+
+  .cta-strip {
+    padding: 2rem 1.5rem;
+  }
+
+  .cta-strip h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-strip p {
     font-size: 0.95rem;
   }
 }
@@ -786,17 +870,26 @@ footer a:hover {
     max-width: 100%;
   }
 
-  .home-contact-card {
-    margin-top: 1rem;
-  }
-
   .page-hero {
     border-radius: 12px;
     padding: 1.2rem 0.75rem;
   }
 
   .cta-strip {
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 12px;
+  }
+
+  .cta-strip h2 {
+    font-size: 1.3rem;
+  }
+
+  .card.team-member {
+    min-height: 180px;
+  }
+
+  .alumni-card img {
+    width: 100px !important;
+    height: 100px !important;
   }
 }
