@@ -15,6 +15,28 @@ $(window).on('load', () => {
     $(window).resize(onResize.bind(this));
     onResize();
 
+    // Close navbar collapse on link click
+    $('.navbar-nav .nav-link').on('click', function() {
+        const navbar = document.querySelector('.navbar-collapse');
+        if (navbar && navbar.classList.contains('show')) {
+            const toggler = document.querySelector('.navbar-toggler');
+            if (toggler) {
+                toggler.click();
+            }
+        }
+    });
+
+    // Ensure navbar-collapse is properly initialized
+    const navElement = document.getElementById('navbarOrcs');
+    if (navElement) {
+        navElement.addEventListener('show.bs.collapse', function() {
+            $(this).slideDown(300);
+        });
+        navElement.addEventListener('hide.bs.collapse', function() {
+            $(this).slideUp(300);
+        });
+    }
+
     $('.home-copy-btn').on('click', function () {
         const value = '(31) 3409-XXXX';
         if (navigator.clipboard && navigator.clipboard.writeText) {

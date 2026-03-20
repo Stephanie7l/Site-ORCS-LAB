@@ -37,6 +37,34 @@ img {
   width: auto;
 }
 
+.navbar-nav {
+  flex-direction: row;
+}
+
+.navbar-nav.ms-lg-auto {
+  margin-left: auto !important;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    flex-direction: column;
+    text-align: right;
+  }
+
+  .navbar-nav.w-100 {
+    width: 100% !important;
+    justify-content: flex-end;
+  }
+
+  .navbar-collapse {
+    padding-top: 1rem;
+  }
+
+  .nav-item {
+    margin-bottom: 0.5rem;
+  }
+}
+
 .nav-link {
   font-weight: 600;
   color: #ffffff !important;
@@ -304,6 +332,7 @@ footer a:hover {
   font-size: 1.2rem;
   margin: 0 0 0.5rem;
   color: var(--orcs-text-strong);
+  text-align: center;
 }
 
 .home-service-media {
@@ -320,6 +349,7 @@ footer a:hover {
   margin-bottom: 0.9rem;
   font-size: 0.95rem;
   flex-grow: 1;
+  text-align: justify;
 }
 
 /* ===== SERVICOS PAGE ===== */
@@ -467,11 +497,13 @@ footer a:hover {
   font-size: 1.16rem;
   color: var(--orcs-text-strong);
   margin-bottom: 0.4rem;
+  text-align: center;
 }
 
 .info-card p {
   color: var(--orcs-text-muted);
   margin-bottom: 0;
+  text-align: justify;
 }
 
 .metric-card {
@@ -619,10 +651,15 @@ footer a:hover {
   .nav-contact-btn {
     width: 100%;
     margin-top: 0.45rem;
+    display: block;
   }
 
   .home-service-media {
     height: 110px;
+  }
+
+  .home-service-card {
+    padding: 0.75rem;
   }
 
   .page-hero {
@@ -639,5 +676,62 @@ footer a:hover {
 
   .section-block-title {
     font-size: 1.35rem;
+  }
+
+  .partner-card {
+    padding: 0.8rem;
+  }
+
+  .info-card {
+    padding: 0.9rem;
+  }
+
+  .metric-card {
+    padding: 0.8rem;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    word-break: break-word;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero {
+    min-height: 500px;
+  }
+
+  .home-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .home-kicker {
+    font-size: 1.3rem;
+  }
+
+  .home-section-title {
+    font-size: 1.5rem;
+  }
+
+  .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .home-contact-card {
+    margin-top: 1rem;
+  }
+
+  .page-hero {
+    border-radius: 12px;
+    padding: 1.2rem 0.75rem;
+  }
+
+  .cta-strip {
+    padding: 1rem;
+    border-radius: 12px;
   }
 }
