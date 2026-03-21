@@ -27,7 +27,15 @@ body.menu-open {
 #destaques,
 #eventos,
 #publicacoes {
-  scroll-margin-top: 110px;
+  scroll-margin-top: 78px;
+}
+
+@media (max-width: 991px) {
+  #destaques,
+  #eventos,
+  #publicacoes {
+    scroll-margin-top: 92px;
+  }
 }
 
 /* ===== IMAGENS RESPONSIVAS ===== */
