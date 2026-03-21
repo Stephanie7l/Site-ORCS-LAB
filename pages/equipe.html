@@ -16,7 +16,12 @@ title: Equipe
   <section class="mb-5">
   <h2 class="section-block-title mb-3">Professores responsáveis</h2>
   <div class="row mb-5">
-    {% assign people = site.data.team_members | sort: "name" %} {% for member in people %}
+    {% assign leaders = "Lucas S. Batista|Michel Bessani|André Costa Batista|Luiza Bernardes Real" | split: "|" %}
+    {% for person_name in leaders %}
+    {% assign member = site.data.team_members | where: "name", person_name | first %}
+    {% unless member %}
+      {% assign member = site.data.team_researchers | where: "name", person_name | first %}
+    {% endunless %}
     <div class="col-12 col-lg-6 mb-3">
       <div class="card team-member team-card-rich">
         <div class="row g-0">
@@ -29,17 +34,24 @@ title: Equipe
           </div>
           <div class="col">
             <div class="card-body">
-              <h6 class="card-title team-name">{{ member.name }}</h6>
-              <h6 class="card-subtitle text-muted">{{ member.title }}</h6>
+              <h6 class="card-title team-name">{{ person_name }}</h6>
+              <h6 class="card-subtitle text-muted">{{ member.title | default: 'Professor responsável' }}</h6>
               <p class="card-text mt-3">
+                {% if member.institute %}
                 <i class="bi bi-bank"></i> {{ member.institute }} <br />
+                {% endif %}
+                {% if member.email %}
                 <i class="bi bi-envelope"></i>
                 <a href="mailto:{{ member.email }}">{{ member.email }}</a>
                 <br />
+                {% endif %}
+                {% if member.lattes %}
                 <i class="bi bi-file-earmark-person"></i>
-                <a href="http://lattes.cnpq.br/{{ member.lattes }}"
-                  >CV Lattes</a
-                >
+                <a href="http://lattes.cnpq.br/{{ member.lattes }}">CV Lattes</a>
+                {% endif %}
+                {% unless member.institute or member.email or member.lattes %}
+                <i class="bi bi-info-circle"></i> Informações em atualização.
+                {% endunless %}
               </p>
             </div>
           </div>
@@ -53,7 +65,9 @@ title: Equipe
   <section class="mb-5">
   <h2 class="section-block-title mb-3">Professores colaboradores</h2>
   <div class="row mb-5">
-    {% assign people = site.data.team_collaborators | sort: "name" %} {% for member in people %}
+    {% assign collaborators = "Eduardo G. Carrano|Felipe Campelo|André L. Maravilha|Ricardo H. C. Takahashi|Martín Gómez Ravetti|Elizabeth Wanner|Claus de Castro Aranha|Adriano Cesar Machado Pereira" | split: "|" %}
+    {% for person_name in collaborators %}
+    {% assign member = site.data.team_collaborators | where: "name", person_name | first %}
     <div class="col-12 col-lg-6 mb-3">
       <div class="card team-member team-card-rich">
         <div class="row g-0">
@@ -66,7 +80,7 @@ title: Equipe
           </div>
           <div class="col">
             <div class="card-body">
-              <h6 class="card-title team-name">{{ member.name }}</h6>
+              <h6 class="card-title team-name">{{ person_name }}</h6>
               <h6 class="card-subtitle text-muted">{{ member.title }}</h6>
               <p class="card-text mt-3">
                 <i class="bi bi-bank"></i> {{ member.institute }}, {{ member.country }} <br />
@@ -83,7 +97,9 @@ title: Equipe
   <section class="mb-5">
   <h2 class="section-block-title mb-3">Estudantes de doutorado</h2>
   <div class="row mb-5">
-    {% assign people = site.data.team_researchers | where_exp: "member", "member.role contains 'D.Sc.'" | sort: "name" %} {% for member in people %}
+    {% assign doctoral_students = "Maria Izabel Corrêa dos Santos|Pedro Vinícius Almeida Borges de Venâncio|Ramon Lacerda Marques|Vitor Vidal de Negreiros|João Pedro Araújo Ferreira Campos|Marcus Vinícius de Freitas Diadelmo" | split: "|" %}
+    {% for person_name in doctoral_students %}
+    {% assign member = site.data.team_researchers | where: "name", person_name | first %}
     <div class="col-12 col-lg-6 mb-3">
       <div class="card team-member team-card-rich">
         <div class="row g-0">
@@ -96,14 +112,18 @@ title: Equipe
           </div>
           <div class="col">
             <div class="card-body">
-              <h6 class="card-title team-name">{{ member.name }}</h6>
-              <h6 class="card-subtitle text-muted">{{ member.role }}</h6>
+              <h6 class="card-title team-name">{{ person_name }}</h6>
+              <h6 class="card-subtitle text-muted">{{ member.role | default: 'D.Sc. student' }}</h6>
               <p class="card-text mt-3">
+                {% if member.research_interests %}
                 <i class="bi bi-search"></i>
                 <span class="text-lowercase">
                   {{ member.research_interests | normalize_whitespace | split:
                   ", " | array_to_sentence_string }}
                 </span>
+                {% else %}
+                <i class="bi bi-info-circle"></i> Informações em atualização.
+                {% endif %}
               </p>
             </div>
           </div>
@@ -117,7 +137,9 @@ title: Equipe
   <section class="mb-5">
   <h2 class="section-block-title mb-3">Estudantes de mestrado</h2>
   <div class="row mb-5">
-    {% assign people = site.data.team_researchers | where_exp: "member", "member.role contains 'M.Sc.'" | sort: "name" %} {% for member in people %}
+    {% assign masters_students = "Bernardo Bacha de Resende|Hannah Walder Lorenzato Cardoso|Henrique Alves Barbosa|Leonardo de Alvarenga Gualberto|Lourival Fernandes Nogueira Neto|Antonio Carlos da Anunciação|Dárcio Melo Bragança Silva|Giovanna Cristina da Rocha|Raphael Anderson da Silva|Willian Felix Souza e Silva" | split: "|" %}
+    {% for person_name in masters_students %}
+    {% assign member = site.data.team_researchers | where: "name", person_name | first %}
     <div class="col-12 col-lg-6 mb-3">
       <div class="card team-member team-card-rich">
         <div class="row g-0">
@@ -130,14 +152,58 @@ title: Equipe
           </div>
           <div class="col">
             <div class="card-body">
-              <h6 class="card-title team-name">{{ member.name }}</h6>
-              <h6 class="card-subtitle text-muted">{{ member.role }}</h6>
+              <h6 class="card-title team-name">{{ person_name }}</h6>
+              <h6 class="card-subtitle text-muted">{{ member.role | default: 'M.Sc. student' }}</h6>
               <p class="card-text mt-3">
+                {% if member.research_interests %}
                 <i class="bi bi-search"></i>
                 <span class="text-lowercase">
                   {{ member.research_interests | normalize_whitespace | split:
                   ", " | array_to_sentence_string }}
                 </span>
+                {% else %}
+                <i class="bi bi-info-circle"></i> Informações em atualização.
+                {% endif %}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  </section>
+
+  <section class="mb-5">
+  <h2 class="section-block-title mb-3">Iniciação científica</h2>
+  <div class="row mb-5">
+    {% assign undergrad_students = "Raissa Diniz|André Procópio|Igor Falco|Lucas Ribeiro" | split: "|" %}
+    {% for person_name in undergrad_students %}
+    {% assign member = site.data.team_researchers | where: "name", person_name | first %}
+    <div class="col-12 col-lg-6 mb-3">
+      <div class="card team-member team-card-rich">
+        <div class="row g-0">
+          <div class="col-auto p-2">
+            <img
+              class="img-thumbnail rounded-circle"
+              src="{{ '/assets/images/team' | relative_url }}/{{ member.photo | default: 'avatar.jpg' }}"
+              alt="{{ person_name }}"
+            />
+          </div>
+          <div class="col">
+            <div class="card-body">
+              <h6 class="card-title team-name">{{ person_name }}</h6>
+              <h6 class="card-subtitle text-muted">Iniciação científica</h6>
+              <p class="card-text mt-3">
+                {% if member.research_interests %}
+                <i class="bi bi-search"></i>
+                <span class="text-lowercase">
+                  {{ member.research_interests | normalize_whitespace | split:
+                  ", " | array_to_sentence_string }}
+                </span>
+                {% else %}
+                <i class="bi bi-info-circle"></i> Informações em atualização.
+                {% endif %}
               </p>
             </div>
           </div>
@@ -162,6 +228,42 @@ title: Equipe
       <h6 class="card-title mt-2 mb-0">{{ member.name }}</h6>
       <p class="mt-1">{{ member.position }}, {{ member.year }}</p>
     </div>
+    {% endfor %}
+  </div>
+
+  {% assign assigned_students_blob = "|Maria Izabel Corrêa dos Santos|Pedro Vinícius Almeida Borges de Venâncio|Ramon Lacerda Marques|Vitor Vidal de Negreiros|João Pedro Araújo Ferreira Campos|Marcus Vinícius de Freitas Diadelmo|Bernardo Bacha de Resende|Hannah Walder Lorenzato Cardoso|Henrique Alves Barbosa|Leonardo de Alvarenga Gualberto|Lourival Fernandes Nogueira Neto|Antonio Carlos da Anunciação|Dárcio Melo Bragança Silva|Giovanna Cristina da Rocha|Raphael Anderson da Silva|Willian Felix Souza e Silva|" %}
+  <h3 class="h5 mb-3">Pesquisadores atuais fora das listas de mestrado e doutorado</h3>
+  <div class="row mb-5">
+    {% for member in site.data.team_researchers %}
+      {% assign current_name_token = "|" | append: member.name | append: "|" %}
+      {% unless assigned_students_blob contains current_name_token %}
+      <div class="col-12 col-lg-6 mb-3">
+        <div class="card team-member team-card-rich">
+          <div class="row g-0">
+            <div class="col-auto p-2">
+              <img
+                class="img-thumbnail rounded-circle"
+                src="{{ '/assets/images/team' | relative_url }}/{{ member.photo | default: 'avatar.jpg' }}"
+                alt="{{ member.name }}"
+              />
+            </div>
+            <div class="col">
+              <div class="card-body">
+                <h6 class="card-title team-name">{{ member.name }}</h6>
+                <h6 class="card-subtitle text-muted">{{ member.role }}</h6>
+                <p class="card-text mt-3">
+                  <i class="bi bi-search"></i>
+                  <span class="text-lowercase">
+                    {{ member.research_interests | normalize_whitespace | split:
+                    ", " | array_to_sentence_string }}
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endunless %}
     {% endfor %}
   </div>
   </section>

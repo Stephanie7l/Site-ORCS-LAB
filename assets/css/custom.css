@@ -449,6 +449,16 @@ footer a:hover {
   margin-top: 2rem;
 }
 
+.home-acontece .info-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-acontece .info-card .btn {
+  margin-top: auto;
+  align-self: center;
+}
+
 .home-service-card {
   border-radius: 14px;
   background:
