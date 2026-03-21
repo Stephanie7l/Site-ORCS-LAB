@@ -147,15 +147,15 @@ footer a:hover {
     transform 0.25s ease,
     box-shadow 0.25s ease;
   height: 100%;
-  min-height: 180px;
+  min-height: 168px;
 }
 
 .card.team-member .card-body {
-  padding: 0.85rem 1rem 0.85rem 0.4rem;
+  padding: 0.72rem 0.9rem 0.72rem 0.35rem;
 }
 
 .card.team-member .card-text {
-  margin-top: 0.65rem !important;
+  margin-top: 0.5rem !important;
   margin-bottom: 0;
 }
 
