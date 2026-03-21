@@ -747,20 +747,23 @@ footer a:hover {
   clear: both;
 }
 
-.acontece-shortcuts .info-card {
-  display: flex;
-  flex-direction: column;
+.acontece-shortcuts.page-block {
   transition: none;
 }
 
-.acontece-shortcuts .info-card:hover {
+.acontece-shortcuts.page-block:hover {
   transform: none;
-  box-shadow: 0 6px 18px rgba(0, 51, 102, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.acontece-shortcuts .info-card {
+  display: flex;
+  flex-direction: column;
 }
 
 .acontece-shortcuts .info-card .btn {
   margin-top: auto;
-  align-self: flex-start;
+  align-self: center;
 }
 
 .metric-card {
