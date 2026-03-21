@@ -10,6 +10,7 @@
   --orcs-text-muted: #4a6580;
   --orcs-bg: #f4f6f8;
   --orcs-white: #ffffff;
+  --anchor-offset: 96px;
 }
 
 body {
@@ -27,15 +28,7 @@ body.menu-open {
 #destaques,
 #eventos,
 #publicacoes {
-  scroll-margin-top: 78px;
-}
-
-@media (max-width: 991px) {
-  #destaques,
-  #eventos,
-  #publicacoes {
-    scroll-margin-top: 92px;
-  }
+  scroll-margin-top: var(--anchor-offset);
 }
 
 /* ===== IMAGENS RESPONSIVAS ===== */

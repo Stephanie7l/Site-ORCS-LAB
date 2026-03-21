@@ -1,5 +1,11 @@
 $(window).on('load', () => {
 
+    function updateAnchorOffset() {
+        const headerHeight = $('header').outerHeight() || $('.navbar').outerHeight() || 0;
+        const extraSpacing = $(window).width() <= 991 ? 10 : 14;
+        document.documentElement.style.setProperty('--anchor-offset', `${headerHeight + extraSpacing}px`);
+    }
+
     function onResize() {
         $('#main-content').height('auto');
         const navbarHeight = $('.navbar').outerHeight() || 0;
@@ -10,6 +16,8 @@ $(window).on('load', () => {
         } else {
             $('#main-content').height('auto');
         }
+
+        updateAnchorOffset();
     }
 
     $(window).resize(onResize.bind(this));
