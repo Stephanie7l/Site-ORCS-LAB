@@ -14,10 +14,9 @@ title: Equipe
   </section>
 
   <section class="mb-5">
-  <h2 class="section-block-title mb-3">Principal Investigators</h2>
+  <h2 class="section-block-title mb-3">Professores responsáveis</h2>
   <div class="row mb-5">
-    {% assign people = site.data.team_members | sort: "name" %} {% for member in
-    people %}
+    {% assign people = site.data.team_members | sort: "name" %} {% for member in people %}
     <div class="col-12 col-lg-6 mb-3">
       <div class="card team-member team-card-rich">
         <div class="row g-0">
@@ -52,10 +51,39 @@ title: Equipe
   </section>
 
   <section class="mb-5">
-  <h2 class="section-block-title mb-3">Researchers</h2>
+  <h2 class="section-block-title mb-3">Professores colaboradores</h2>
   <div class="row mb-5">
-    {% assign people = site.data.team_researchers | sort: "name" %} {% for
-    member in people %}
+    {% assign people = site.data.team_collaborators | sort: "name" %} {% for member in people %}
+    <div class="col-12 col-lg-6 mb-3">
+      <div class="card team-member team-card-rich">
+        <div class="row g-0">
+          <div class="col-auto p-2">
+            <img
+              class="img-thumbnail rounded-circle"
+              src="{{ '/assets/images/team' | relative_url }}/{{ member.photo | default: 'avatar.jpg' }}"
+              alt="{{ member.name }}"
+            />
+          </div>
+          <div class="col">
+            <div class="card-body">
+              <h6 class="card-title team-name">{{ member.name }}</h6>
+              <h6 class="card-subtitle text-muted">{{ member.title }}</h6>
+              <p class="card-text mt-3">
+                <i class="bi bi-bank"></i> {{ member.institute }}, {{ member.country }} <br />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  </section>
+
+  <section class="mb-5">
+  <h2 class="section-block-title mb-3">Estudantes de doutorado</h2>
+  <div class="row mb-5">
+    {% assign people = site.data.team_researchers | where_exp: "member", "member.role contains 'D.Sc.'" | sort: "name" %} {% for member in people %}
     <div class="col-12 col-lg-6 mb-3">
       <div class="card team-member team-card-rich">
         <div class="row g-0">
@@ -87,10 +115,9 @@ title: Equipe
   </section>
 
   <section class="mb-5">
-  <h2 class="section-block-title mb-3">Collaborators</h2>
+  <h2 class="section-block-title mb-3">Estudantes de mestrado</h2>
   <div class="row mb-5">
-    {% assign people = site.data.team_collaborators | sort: "name" %} {% for
-    member in people %}
+    {% assign people = site.data.team_researchers | where_exp: "member", "member.role contains 'M.Sc.'" | sort: "name" %} {% for member in people %}
     <div class="col-12 col-lg-6 mb-3">
       <div class="card team-member team-card-rich">
         <div class="row g-0">
@@ -104,10 +131,13 @@ title: Equipe
           <div class="col">
             <div class="card-body">
               <h6 class="card-title team-name">{{ member.name }}</h6>
-              <h6 class="card-subtitle text-muted">{{ member.title }}</h6>
+              <h6 class="card-subtitle text-muted">{{ member.role }}</h6>
               <p class="card-text mt-3">
-                <i class="bi bi-bank"></i> {{ member.institute }}, {{
-                member.country }} <br />
+                <i class="bi bi-search"></i>
+                <span class="text-lowercase">
+                  {{ member.research_interests | normalize_whitespace | split:
+                  ", " | array_to_sentence_string }}
+                </span>
               </p>
             </div>
           </div>
@@ -119,7 +149,7 @@ title: Equipe
   </section>
 
   <section>
-  <h2 class="section-block-title mb-3">Alumni</h2>
+  <h2 class="section-block-title mb-3">Egressos</h2>
   <div class="row mb-5 gx-4">
     {% assign people = site.data.team_alumni | sort: "year" | reverse %} {% for
     member in people %}

@@ -1,95 +1,43 @@
 ---
 layout: default
-permalink: /estrutura/
-title: Estrutura
+permalink: /pesquisa/
+title: Pesquisa
 ---
 
 <div class="container my-5">
   <section class="page-hero mb-5">
-    <p class="page-hero-kicker mb-2">Infraestrutura</p>
-    <h1 class="page-hero-title">Nossa Estrutura</h1>
+    <p class="page-hero-kicker mb-2">Linhas e projetos</p>
+    <h1 class="page-hero-title">Pesquisa</h1>
     <p class="page-hero-subtitle mb-0">
-      Ambiente técnico e colaborativo para pesquisa aplicada em sistemas complexos.
+      Conheça os temas de pesquisa e publicações desenvolvidos no ORCS Lab.
     </p>
   </section>
 
-  <section class="row g-3 mb-4">
-    <div class="col-12 col-lg-6">
-      <article class="info-card h-100">
-        <div class="d-flex align-items-center mb-2">
-          <div class="info-card-icon"><i class="bi bi-building"></i></div>
-          <h3>Espaços Físicos</h3>
-        </div>
-        <p>
-          O laboratório ocupa uma área de aproximadamente <strong>100 m²</strong>, dividida em áreas específicas para
-          estudo, pesquisa e desenvolvimento. Conta com mesas para trabalho colaborativo, trabalho individual e projetor
-          para apresentações.
-        </p>
-      </article>
-    </div>
-    <div class="col-12 col-lg-6">
-      <article class="info-card h-100">
-        <div class="d-flex align-items-center mb-2">
-          <div class="info-card-icon"><i class="bi bi-people"></i></div>
-          <h3>Capacidade</h3>
-        </div>
-        <p>
-          A estrutura comporta até <strong>20 estudantes</strong>, oferecendo suporte para o desenvolvimento de projetos
-          e colaborações.
-        </p>
-      </article>
-    </div>
-  </section>
-
-  <section class="row g-3 mb-4">
-    <div class="col-12 col-lg-6">
-      <article class="info-card h-100">
-        <div class="d-flex align-items-center mb-2">
-          <div class="info-card-icon"><i class="bi bi-cpu"></i></div>
-          <h3>Equipamentos</h3>
-        </div>
-        <ul class="simple-list mb-0">
-          <li>13 estações de trabalho para uso individual.</li>
-          <li>4 servidores locais para simulações e armazenamento de dados.</li>
-        </ul>
-      </article>
-    </div>
-    <div class="col-12 col-lg-6">
-      <article class="info-card h-100">
-        <div class="d-flex align-items-center mb-2">
-          <div class="info-card-icon"><i class="bi bi-code-slash"></i></div>
-          <h3>Softwares</h3>
-        </div>
-        <ul class="simple-list mb-0">
-          <li>MATLAB e Simulink.</li>
-          <li>Python com bibliotecas como NumPy, TensorFlow e Scikit-learn.</li>
-          <li>Plataformas de desenvolvimento colaborativo, como GitHub.</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
   <section class="row g-3">
-    <div class="col-12 col-lg-6">
+    {% for project in site.data.research_projects %}
+    <div class="col-12">
       <article class="info-card h-100">
         <div class="d-flex align-items-center mb-2">
-          <div class="info-card-icon"><i class="bi bi-journal-text"></i></div>
-          <h3>Recursos de Biblioteca</h3>
+          <div class="info-card-icon"><i class="bi bi-journal-richtext"></i></div>
+          <h3>{{ project.title }}</h3>
         </div>
-        <p>
-          O laboratório conta com uma coleção de mais de <strong>50 livros</strong>, abrangendo temas como otimização,
-          inteligência artificial, ciência de dados, engenharia de sistemas e desenvolvimento de software.
-        </p>
+        <p>{{ project.description }}</p>
+        {% if project.publications and project.publications.size > 0 %}
+        <h4 class="h6 fw-bold mt-3 mb-2">Publicações relacionadas</h4>
+        <ul class="simple-list mb-0">
+          {% for publication in project.publications %}
+          <li>{{ publication }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
       </article>
     </div>
-    <div class="col-12 col-lg-6">
-      <article class="info-card h-100">
-        <div class="d-flex align-items-center mb-2">
-          <div class="info-card-icon"><i class="bi bi-wifi"></i></div>
-          <h3>Outros Recursos</h3>
-        </div>
-        <p>Ambiente para longas jornadas de trabalho, cozinha equipada, área de convivência e rede Wi-Fi de alta velocidade.</p>
-      </article>
-    </div>
+    {% endfor %}
+  </section>
+
+  <section class="cta-strip text-center mt-4">
+    <h2>Quer desenvolver pesquisa aplicada com o ORCS Lab?</h2>
+    <p class="mb-3">Converse com nossa equipe para construir projetos científicos com impacto real.</p>
+    <a href="{{ '/contato/' | relative_url }}" class="btn btn-primary px-4">Entrar em contato</a>
   </section>
 </div>
