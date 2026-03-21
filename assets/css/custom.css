@@ -747,6 +747,22 @@ footer a:hover {
   clear: both;
 }
 
+.acontece-shortcuts .info-card {
+  display: flex;
+  flex-direction: column;
+  transition: none;
+}
+
+.acontece-shortcuts .info-card:hover {
+  transform: none;
+  box-shadow: 0 6px 18px rgba(0, 51, 102, 0.08);
+}
+
+.acontece-shortcuts .info-card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
 .metric-card {
   background: linear-gradient(150deg, #f6fbff 0%, #ffffff 70%);
   border: 1px solid #d7e6f3;
