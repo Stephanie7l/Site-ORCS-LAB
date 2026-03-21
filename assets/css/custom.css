@@ -600,8 +600,24 @@ footer a:hover {
     radial-gradient(circle at top right, rgba(255, 255, 255, 0.2), transparent 42%);
   border-radius: 18px;
   color: var(--orcs-white);
-  padding: 2rem 1.8rem;
+  padding: 2rem 8.2rem 2rem 1.8rem;
   box-shadow: 0 12px 28px rgba(0, 51, 102, 0.22);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 1.4rem;
+  width: 86px;
+  height: 86px;
+  transform: translateY(-50%);
+  background: url('../images/orcs_logo.png') center/contain no-repeat;
+  opacity: 0.65;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.22));
 }
 
 .page-hero-kicker {
@@ -954,7 +970,16 @@ footer a:hover {
   }
 
   .page-hero {
-    padding: 1.5rem 1rem;
+    padding: 1.4rem 1rem 1.3rem;
+  }
+
+  .page-hero::after {
+    width: 56px;
+    height: 56px;
+    right: 0.8rem;
+    top: 0.85rem;
+    transform: none;
+    opacity: 0.62;
   }
 
   .page-hero-title {
