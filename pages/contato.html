@@ -21,7 +21,10 @@ title: Contato
           Preencha os dados abaixo e retornaremos com direcionamento técnico inicial.
         </p>
 
-        <form action="mailto:{{ site.email }}" method="post" enctype="text/plain">
+        <form action="https://formsubmit.co/{{ site.email | strip }}" method="post">
+          <input type="hidden" name="_subject" value="Novo contato pelo site ORCS Lab">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
           <div class="row g-3">
             <div class="col-12 col-md-6">
               <label for="nome" class="form-label">Nome</label>
