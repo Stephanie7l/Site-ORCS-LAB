@@ -131,16 +131,17 @@ header {
   .navbar-collapse {
     position: fixed;
     top: 0.6rem;
-    right: 0.6rem;
+    right: 0;
     left: auto;
     z-index: 1095;
-    width: min(260px, calc(100vw - 4.8rem));
+    width: min(236px, calc(100vw - 5.2rem));
     height: auto;
     max-height: calc(100dvh - 1.2rem);
     padding: 4.8rem 0.9rem 1rem;
-    background: #002a57;
+    background: var(--orcs-blue-900);
     border: 1px solid #0b3f76;
-    border-radius: 12px;
+    border-right: 0;
+    border-radius: 12px 0 0 12px;
     box-shadow: 0 16px 30px rgba(0, 23, 45, 0.35);
     overflow-y: auto;
     transform: translateX(104%);
