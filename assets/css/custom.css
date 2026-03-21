@@ -611,8 +611,8 @@ footer a:hover {
   position: absolute;
   top: 50%;
   right: 1.4rem;
-  width: 86px;
-  height: 86px;
+  width: 112px;
+  height: 112px;
   transform: translateY(-50%);
   background: url('../images/orcs_logo.png') center/contain no-repeat;
   opacity: 0.65;
