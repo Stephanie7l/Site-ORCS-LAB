@@ -68,6 +68,10 @@ header {
     padding-bottom: 0.55rem;
   }
 
+  .navbar .container {
+    position: relative;
+  }
+
   .orcs-menu-toggle {
     border: 1px solid rgba(255, 255, 255, 0.45);
     border-radius: 10px;
@@ -116,13 +120,20 @@ header {
   }
 
   .navbar-collapse {
-    position: fixed;
-    inset: 0;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0.75rem;
+    left: auto;
     z-index: 1095;
-    padding: 5.6rem 1.7rem 2rem;
+    width: min(320px, calc(100vw - 1.5rem));
+    max-height: 75vh;
+    padding: 1rem 1rem 1.1rem;
     background:
       linear-gradient(160deg, rgba(0, 40, 82, 0.97), rgba(0, 71, 122, 0.94)),
       radial-gradient(circle at top left, rgba(255, 255, 255, 0.14), transparent 46%);
+    border: 1px solid rgba(180, 215, 247, 0.25);
+    border-radius: 14px;
+    box-shadow: 0 16px 30px rgba(0, 23, 45, 0.35);
     overflow-y: auto;
   }
 
@@ -131,9 +142,9 @@ header {
   }
 
   .navbar-nav .nav-link {
-    font-size: 1.28rem;
-    padding-top: 0.45rem;
-    padding-bottom: 0.45rem;
+    font-size: 1.02rem;
+    padding-top: 0.38rem;
+    padding-bottom: 0.38rem;
     transform: none !important;
   }
 
@@ -143,8 +154,8 @@ header {
   }
 
   .nav-contact-btn {
-    width: min(260px, 100%);
-    margin-top: 0.8rem;
+    width: 100%;
+    margin-top: 0.55rem;
     margin-left: 0;
     border-radius: 10px;
   }
@@ -553,6 +564,16 @@ footer a:hover {
 .contact-form-card .form-select:focus {
   border-color: var(--orcs-blue-500);
   box-shadow: 0 0 0 0.2rem rgba(45, 122, 192, 0.2);
+}
+
+.contact-info-list h6 {
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.contact-info-list a,
+.contact-info-list p {
+  font-weight: 400;
 }
 
 /* ===== INTERNAL PAGES ===== */
