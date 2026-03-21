@@ -129,14 +129,15 @@ header {
   }
 
   .navbar-collapse {
-    position: absolute;
-    top: calc(100% + 0.5rem);
-    right: 0.75rem;
+    position: fixed;
+    top: 0;
+    right: 0;
     left: auto;
     z-index: 1095;
-    width: min(320px, calc(100vw - 1.5rem));
-    max-height: 75vh;
-    padding: 1rem 1rem 1.1rem;
+    width: min(320px, calc(100vw - 2rem));
+    height: 100dvh;
+    max-height: 100dvh;
+    padding: 5.3rem 1rem 1.1rem;
     background:
       linear-gradient(160deg, rgba(0, 40, 82, 0.97), rgba(0, 71, 122, 0.94)),
       radial-gradient(
@@ -144,10 +145,35 @@ header {
         rgba(255, 255, 255, 0.14),
         transparent 46%
       );
-    border: 1px solid rgba(180, 215, 247, 0.25);
-    border-radius: 14px;
+    border-left: 1px solid rgba(180, 215, 247, 0.25);
+    border-radius: 0;
     box-shadow: 0 16px 30px rgba(0, 23, 45, 0.35);
     overflow-y: auto;
+    transform: translateX(104%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.28s ease, opacity 0.2s ease;
+  }
+
+  .navbar-collapse.collapse.show {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .navbar-collapse.collapsing {
+    height: 100dvh !important;
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: transform 0.28s ease, opacity 0.2s ease;
+  }
+
+  .navbar-collapse.collapse:not(.show) {
+    display: block;
   }
 
   .nav-item {
