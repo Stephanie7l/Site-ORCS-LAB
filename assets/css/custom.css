@@ -402,7 +402,7 @@ footer a:hover {
 
 .home-contact-item p {
   margin: 0.15rem 0 0;
-  color: var(--orcs-text-muted);
+  color: var(--orcs-blue-900);
   font-size: 0.92rem;
 }
 
@@ -444,7 +444,7 @@ footer a:hover {
 }
 
 .home-intro-text {
-  color: var(--orcs-text-muted);
+  color: var(--orcs-blue-900);
   max-width: 540px;
   font-size: 1.15rem;
   margin-bottom: 1.2rem;
@@ -528,11 +528,15 @@ footer a:hover {
 }
 
 .home-service-card p {
-  color: var(--orcs-text-muted);
+  color: var(--orcs-blue-900);
   margin-bottom: 0.9rem;
   font-size: 0.95rem;
   flex-grow: 1;
   text-align: justify;
+}
+
+.home-acontece .info-card p {
+  color: var(--orcs-blue-900);
 }
 
 /* ===== SERVICOS PAGE ===== */
@@ -573,7 +577,7 @@ footer a:hover {
 }
 
 .service-block p {
-  color: var(--orcs-text-muted);
+  color: var(--orcs-blue-900);
   margin-bottom: 0.85rem;
 }
 
@@ -689,7 +693,7 @@ footer a:hover {
 
 .page-rich-text {
   text-align: justify;
-  color: var(--orcs-text-muted);
+  color: var(--orcs-blue-900);
 }
 
 .page-block {
@@ -754,7 +758,7 @@ footer a:hover {
 }
 
 .info-card p {
-  color: var(--orcs-text-muted);
+  color: var(--orcs-blue-900);
   margin-bottom: 0.8rem;
   text-align: justify;
   clear: both;
@@ -806,7 +810,7 @@ footer a:hover {
 
 .metric-card p {
   margin: 0.25rem 0 0;
-  color: var(--orcs-text-muted);
+  color: var(--orcs-blue-900);
 }
 
 .cta-strip {
@@ -863,7 +867,7 @@ footer a:hover {
 .service-bullets {
   margin-bottom: 0.95rem;
   padding-left: 1.15rem;
-  color: var(--orcs-text-muted);
+  color: var(--orcs-blue-900);
 }
 
 .service-bullets li {
@@ -922,12 +926,12 @@ footer a:hover {
 }
 
 .partner-card p {
-  color: var(--orcs-text-muted);
+  color: var(--orcs-blue-900);
   margin: 0;
 }
 
 .simple-list {
-  color: var(--orcs-text-muted);
+  color: var(--orcs-blue-900);
   padding-left: 1.05rem;
 }
 
