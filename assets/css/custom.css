@@ -20,6 +20,10 @@ body {
   padding: 0;
 }
 
+body.menu-open {
+  overflow: hidden;
+}
+
 /* ===== IMAGENS RESPONSIVAS ===== */
 img {
   max-width: 100%;
@@ -28,13 +32,26 @@ img {
 }
 
 /* ===== HEADER ===== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+}
+
 .navbar {
   background-color: var(--orcs-blue-900);
+  box-shadow: 0 8px 24px rgba(0, 51, 102, 0.24);
 }
 
 .site-logo {
   height: 80px;
   width: auto;
+}
+
+.navbar-brand,
+.navbar-toggler {
+  position: relative;
+  z-index: 1110;
 }
 
 .navbar-nav {
@@ -46,9 +63,51 @@ img {
 }
 
 @media (max-width: 991px) {
+  .navbar {
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
+  }
+
+  .orcs-menu-toggle {
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 10px;
+    padding: 0.42rem 0.55rem;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(4px);
+    box-shadow: none;
+  }
+
+  .orcs-menu-toggle:focus {
+    box-shadow: 0 0 0 0.18rem rgba(255, 255, 255, 0.22);
+  }
+
+  .orcs-menu-toggle .hamburger-line {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 4px 0;
+    background: #ffffff;
+    border-radius: 5px;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+  }
+
+  .orcs-menu-toggle[aria-expanded="true"] .hamburger-line:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .orcs-menu-toggle[aria-expanded="true"] .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .orcs-menu-toggle[aria-expanded="true"] .hamburger-line:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
   .navbar-nav {
     flex-direction: column;
     text-align: right;
+    align-items: flex-end;
+    gap: 0.15rem;
   }
 
   .navbar-nav.w-100 {
@@ -57,11 +116,37 @@ img {
   }
 
   .navbar-collapse {
-    padding-top: 1rem;
+    position: fixed;
+    inset: 0;
+    z-index: 1095;
+    padding: 5.6rem 1.7rem 2rem;
+    background:
+      linear-gradient(160deg, rgba(0, 40, 82, 0.97), rgba(0, 71, 122, 0.94)),
+      radial-gradient(circle at top left, rgba(255, 255, 255, 0.14), transparent 46%);
+    overflow-y: auto;
   }
 
   .nav-item {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.28rem;
+    padding-top: 0.45rem;
+    padding-bottom: 0.45rem;
+    transform: none !important;
+  }
+
+  .navbar .nav-link:not(.nav-contact-btn):hover {
+    color: #8dc6ff !important;
+    transform: none !important;
+  }
+
+  .nav-contact-btn {
+    width: min(260px, 100%);
+    margin-top: 0.8rem;
+    margin-left: 0;
+    border-radius: 10px;
   }
 }
 
@@ -345,7 +430,7 @@ footer a:hover {
 }
 
 .home-services {
-  margin-top: 0.2rem;
+  margin-top: 2.4rem;
 }
 
 .home-acontece {
@@ -576,20 +661,23 @@ footer a:hover {
 .metric-card {
   background: linear-gradient(150deg, #f6fbff 0%, #ffffff 70%);
   border: 1px solid #d7e6f3;
-  border-radius: 14px;
-  box-shadow: 0 6px 16px rgba(0, 51, 102, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   padding: 1rem;
   text-align: center;
-  min-height: 140px;
+  min-height: 168px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .metric-card h3 {
   margin: 0;
-  font-size: 1.65rem;
+  font-size: 2.3rem;
+  font-weight: 700;
+  line-height: 1;
   color: var(--orcs-blue-700);
 }
 
@@ -670,6 +758,32 @@ footer a:hover {
 }
 
 .partner-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 51, 102, 0.12);
+}
+
+/* ===== PADRAO DE CARD DA EQUIPE ===== */
+.home-service-card,
+.service-block,
+.contact-form-card,
+.page-block,
+.info-card,
+.metric-card,
+.partner-card,
+.alumni-card {
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.home-service-card:hover,
+.service-block:hover,
+.contact-form-card:hover,
+.page-block:hover,
+.info-card:hover,
+.metric-card:hover,
+.partner-card:hover,
+.alumni-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 25px rgba(0, 51, 102, 0.12);
 }
@@ -829,12 +943,16 @@ footer a:hover {
     padding: 0.8rem;
   }
 
+  .metric-card h3 {
+    font-size: 2rem;
+  }
+
   .alumni-card {
     padding: 0.8rem;
   }
 
   .card.team-member {
-    min-height: 200px;
+    min-height: 168px;
   }
 
   h1, h2, h3, h4, h5, h6 {

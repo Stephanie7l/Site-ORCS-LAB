@@ -30,12 +30,18 @@ $(window).on('load', () => {
     const navElement = document.getElementById('navbarOrcs');
     if (navElement) {
         navElement.addEventListener('show.bs.collapse', function() {
-            $(this).slideDown(300);
+            $('body').addClass('menu-open');
         });
         navElement.addEventListener('hide.bs.collapse', function() {
-            $(this).slideUp(300);
+            $('body').removeClass('menu-open');
         });
     }
+
+    $(window).on('resize', function() {
+        if ($(window).width() > 991) {
+            $('body').removeClass('menu-open');
+        }
+    });
 
     $('.home-copy-btn').on('click', function () {
         const value = '(31) 3409-XXXX';
