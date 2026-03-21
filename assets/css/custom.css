@@ -145,8 +145,19 @@ footer a:hover {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   transition:
     transform 0.25s ease,
-    box-shadow 0.25s ease;  height: 100%;
-  min-height: 220px;}
+    box-shadow 0.25s ease;
+  height: 100%;
+  min-height: 180px;
+}
+
+.card.team-member .card-body {
+  padding: 0.85rem 1rem 0.85rem 0.4rem;
+}
+
+.card.team-member .card-text {
+  margin-top: 0.65rem !important;
+  margin-bottom: 0;
+}
 
 .card.team-member:hover {
   transform: translateY(-6px);
@@ -574,7 +585,6 @@ footer a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 }
 
 .metric-card h3 {
