@@ -24,6 +24,12 @@ body.menu-open {
   overflow: hidden;
 }
 
+#destaques,
+#eventos,
+#publicacoes {
+  scroll-margin-top: 110px;
+}
+
 /* ===== IMAGENS RESPONSIVAS ===== */
 img {
   max-width: 100%;
