@@ -683,6 +683,10 @@ footer a:hover {
   box-shadow: 0 12px 28px rgba(0, 51, 102, 0.18);
 }
 
+.quem-somos-gallery .page-feature-image {
+  max-height: 255px;
+}
+
 .page-rich-text {
   text-align: justify;
   color: var(--orcs-text-muted);
@@ -1055,6 +1059,10 @@ footer a:hover {
 
   .page-hero-title {
     font-size: 1.85rem;
+  }
+
+  .quem-somos-gallery .page-feature-image {
+    max-height: 210px;
   }
 
   .page-hero-subtitle {
