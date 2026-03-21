@@ -52,4 +52,40 @@ $(window).on('load', () => {
         setTimeout(() => $(this).text('Copiar'), 1200);
     });
 
+    const whatsappForm = document.getElementById('whatsapp-contact-form');
+    if (whatsappForm) {
+        whatsappForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            if (!whatsappForm.checkValidity()) {
+                whatsappForm.reportValidity();
+                return;
+            }
+
+            const nome = document.getElementById('nome')?.value?.trim() || '';
+            const organizacao = document.getElementById('organizacao')?.value?.trim() || '';
+            const email = document.getElementById('email')?.value?.trim() || '';
+            const telefone = document.getElementById('telefone')?.value?.trim() || '';
+            const tipo = document.getElementById('tipo')?.value?.trim() || '';
+            const prazo = document.getElementById('prazo')?.value?.trim() || '';
+            const mensagem = document.getElementById('mensagem')?.value?.trim() || '';
+
+            const texto = [
+                'Ola, ORCS Lab. Gostaria de solicitar projeto/parceria.',
+                '',
+                `Nome: ${nome}`,
+                `Empresa/Organizacao: ${organizacao}`,
+                `E-mail: ${email}`,
+                `Telefone: ${telefone || 'Nao informado'}`,
+                `Tipo de demanda: ${tipo}`,
+                `Prazo estimado: ${prazo || 'Nao informado'}`,
+                `Desafio: ${mensagem}`
+            ].join('\n');
+
+            const whatsappNumber = '553134093550';
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(texto)}`;
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        });
+    }
+
 });
