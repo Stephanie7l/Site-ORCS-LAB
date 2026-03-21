@@ -159,11 +159,13 @@ header {
   }
 
   .navbar-collapse.collapsing {
-    height: 100dvh !important;
+    height: auto !important;
+    max-height: calc(100dvh - 1.2rem);
     transform: translateX(0);
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    overflow-y: auto;
     transition: transform 0.28s ease, opacity 0.2s ease;
   }
 
