@@ -23,7 +23,7 @@ $(window).on('load', () => {
     $(window).resize(onResize.bind(this));
     onResize();
 
-    // Close navbar collapse on link click
+    // Fecha o menu de navegação em dispositivos móveis após selecionar um link.
     $('.navbar-nav .nav-link').on('click', function() {
         const navbar = document.querySelector('.navbar-collapse');
         if (navbar && navbar.classList.contains('show')) {
@@ -34,7 +34,7 @@ $(window).on('load', () => {
         }
     });
 
-    // Ensure navbar-collapse is properly initialized
+    // Sincroniza o estado visual do body com a abertura e o fechamento do menu.
     const navElement = document.getElementById('navbarOrcs');
     if (navElement) {
         navElement.addEventListener('show.bs.collapse', function() {
@@ -79,14 +79,14 @@ $(window).on('load', () => {
             const mensagem = document.getElementById('mensagem')?.value?.trim() || '';
 
             const texto = [
-                'Ola, ORCS Lab. Gostaria de solicitar projeto/parceria.',
+                'Olá, ORCS Lab. Gostaria de solicitar projeto/parceria.',
                 '',
                 `Nome: ${nome}`,
-                `Empresa/Organizacao: ${organizacao}`,
+                `Empresa/Organização: ${organizacao}`,
                 `E-mail: ${email}`,
-                `Telefone: ${telefone || 'Nao informado'}`,
+                `Telefone: ${telefone || 'Não informado'}`,
                 `Tipo de demanda: ${tipo}`,
-                `Prazo estimado: ${prazo || 'Nao informado'}`,
+                `Prazo estimado: ${prazo || 'Não informado'}`,
                 `Desafio: ${mensagem}`
             ].join('\n');
 

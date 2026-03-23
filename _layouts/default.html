@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,9 +35,21 @@
 
     <main id="main-content" class="my-4">{{ content }}</main>
 
+    <a
+      class="whatsapp-float-btn"
+      href="https://wa.me/553134093550"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar com o ORCS Lab no WhatsApp"
+      title="Fale conosco no WhatsApp"
+    >
+      <i class="bi bi-whatsapp" aria-hidden="true"></i>
+      <span>WhatsApp</span>
+    </a>
+
     {% include footer.html %}
     <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="{{ '/assets/js/custom.js' | relative_url }}"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-/* Import Google Font */
+/* Fonte tipográfica principal do site */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
 :root {
@@ -31,14 +31,14 @@ body.menu-open {
   scroll-margin-top: var(--anchor-offset);
 }
 
-/* ===== IMAGENS RESPONSIVAS ===== */
+/* ===== Seção: Imagens responsivas ===== */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* ===== HEADER ===== */
+/* ===== Seção: Cabeçalho ===== */
 header {
   position: sticky;
   top: 0;
@@ -239,7 +239,7 @@ header {
   transform: none !important;
 }
 
-/* ===== FOOTER ===== */
+/* ===== Seção: Rodapé ===== */
 footer {
   background-color: var(--orcs-blue-900);
   color: var(--orcs-white) !important;
@@ -257,7 +257,59 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* ===== BOTÕES ===== */
+/* ===== Seção: Botão flutuante do WhatsApp ===== */
+.whatsapp-float-btn {
+  position: fixed;
+  right: 1.1rem;
+  bottom: 1.1rem;
+  z-index: 1200;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.62rem 0.9rem;
+  border-radius: 999px;
+  background: #25d366;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 10px 26px rgba(17, 95, 46, 0.34);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.whatsapp-float-btn:hover,
+.whatsapp-float-btn:focus-visible {
+  color: #ffffff;
+  background: #1ebe5b;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(13, 84, 39, 0.36);
+}
+
+.whatsapp-float-btn i {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+@media (max-width: 576px) {
+  .whatsapp-float-btn {
+    right: 0.75rem;
+    bottom: 0.75rem;
+    padding: 0.68rem;
+  }
+
+  .whatsapp-float-btn span {
+    display: none;
+  }
+
+  .whatsapp-float-btn i {
+    font-size: 1.35rem;
+  }
+}
+
+/* ===== Seção: Botões ===== */
 .btn-primary {
   background-color: var(--orcs-blue-700);
   border-color: var(--orcs-blue-700);
@@ -272,7 +324,7 @@ footer a:hover {
   color: var(--orcs-blue-900);
 }
 
-/* ===== EQUIPE MELHORADA ===== */
+/* ===== Seção: Equipe ===== */
 
 .card.team-member {
   border: none;
@@ -306,7 +358,7 @@ footer a:hover {
   border-radius: 50%;
 }
 
-/* ===== LINKS CONTATO ===== */
+/* ===== Seção: Links de contato ===== */
 .link-personalizado {
   color: var(--orcs-blue-900);
   text-decoration: none;
@@ -318,7 +370,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* ===== HOME REDESIGN ===== */
+/* ===== Seção: Página inicial ===== */
 .home-hero {
   position: relative;
   min-height: 470px;
@@ -562,7 +614,7 @@ footer a:hover {
   color: var(--orcs-blue-900);
 }
 
-/* ===== SERVICOS PAGE ===== */
+/* ===== Seção: Página de serviços ===== */
 .service-page-title {
   color: var(--orcs-text-strong);
 }
@@ -604,7 +656,7 @@ footer a:hover {
   margin-bottom: 0.85rem;
 }
 
-/* ===== CONTATO PAGE ===== */
+/* ===== Seção: Página de contato ===== */
 .contact-form-card {
   background: var(--orcs-white);
   border: 1px solid #d7e6f5;
@@ -649,7 +701,7 @@ footer a:hover {
   font-weight: 400;
 }
 
-/* ===== INTERNAL PAGES ===== */
+/* ===== Seção: Páginas internas ===== */
 .page-hero {
   background:
     linear-gradient(140deg, rgba(0, 51, 102, 0.95), rgba(0, 95, 153, 0.88)),
@@ -914,7 +966,7 @@ footer a:hover {
   box-shadow: 0 8px 25px rgba(0, 51, 102, 0.12);
 }
 
-/* ===== PADRAO DE CARD DA EQUIPE ===== */
+/* ===== Seção: Padrão visual de cards ===== */
 .home-service-card,
 .service-block,
 .contact-form-card,
@@ -1016,7 +1068,7 @@ footer a:hover {
   font-size: 0.9rem;
 }
 
-/* ===== RESPONSIVIDADE ===== */
+/* ===== Seção: Responsividade ===== */
 @media (max-width: 768px) {
   .site-logo {
     height: 60px;
