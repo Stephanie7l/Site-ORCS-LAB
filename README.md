@@ -82,15 +82,11 @@ O ORCS Lab desenvolve estudos, projetos e soluções envolvendo:
       <strong>Lucas de Souza Batista</strong><br>
       D.Sc. em Engenharia Elétrica<br>
       Universidade Federal de Minas Gerais<br>
-      📧 lusobo@ufmg.br<br>
-      🔗 CV Lattes
     </td>
     <td>
       <strong>Michel Bessani</strong><br>
       D.Sc. em Engenharia Elétrica<br>
       Universidade Federal de Minas Gerais<br>
-      📧 mbessani@ufmg.br<br>
-      🔗 CV Lattes
     </td>
   </tr>
   <tr>
